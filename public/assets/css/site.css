@@ -1406,3 +1406,105 @@ iframe{
     margin-inline:10px;
   }
 }
+
+/* Final responsive footer */
+.site-footer{
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+}
+.footer-grid{
+  width:100%;
+  max-width:1240px;
+  margin-inline:auto;
+  grid-template-columns:minmax(220px,1fr) minmax(145px,.48fr) minmax(145px,.48fr) minmax(320px,380px);
+  gap:clamp(24px,3vw,48px);
+  align-items:start;
+}
+.footer-grid>*{
+  min-width:0;
+  grid-column:auto;
+  grid-row:auto;
+}
+.footer-contact-panel{
+  width:100%;
+  min-width:0;
+  max-width:380px;
+  justify-self:end;
+}
+.footer-contact-emails,
+.footer-contact-emails a,
+.footer-contact-emails strong{
+  width:100%;
+  min-width:0;
+  max-width:100%;
+}
+.footer-contact-emails strong{
+  display:block;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.footer-social-actions{
+  width:auto;
+  margin-top:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.footer-social{
+  width:44px;
+  height:44px;
+  min-width:44px;
+  min-height:44px;
+  padding:0;
+  flex:0 0 44px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.footer-social svg{
+  width:26px;
+  height:26px;
+}
+.footer-social-whatsapp{background:transparent;color:#35d477}
+.footer-social-instagram{background:transparent;color:#f0679d}
+
+@media(max-width:1080px){
+  .footer-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:36px;
+  }
+  .footer-grid>.footer-brand,
+  .footer-contact-panel{
+    grid-column:auto;
+    grid-row:auto;
+  }
+  .footer-contact-panel{
+    max-width:none;
+    justify-self:stretch;
+  }
+}
+
+@media(max-width:640px){
+  .site-footer{padding:52px 18px 24px}
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  .footer-grid>.footer-brand,
+  .footer-contact-panel{
+    grid-column:1;
+    grid-row:auto;
+  }
+  .footer-grid nav{min-width:0}
+  .footer-contact-panel{
+    max-width:100%;
+    padding:26px 22px;
+  }
+  .footer-contact-panel h2{max-width:100%}
+  .footer-bottom{
+    margin-top:38px;
+    display:grid;
+    gap:12px;
+  }
+}
