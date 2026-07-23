@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /storage/
 
-Sitemap: http://localhost:8080/sitemap.xml
+Sitemap: https://metallife.com.br/sitemap.xml
