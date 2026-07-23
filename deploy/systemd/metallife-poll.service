@@ -1,0 +1,10 @@
+[Unit]
+Description=Check and deploy Metal Life updates
+After=docker.service network-online.target
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/poll-metallife
+Nice=10
