@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  web:
+    image: metallife:20260723
+    environment:
+      APP_URL: https://metallife.com.br
+    networks:
+      - traefik_public
+    volumes:
+      - metallife_storage:/var/www/html/storage
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        order: stop-first
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+        reservations:
+          cpus: "0.05"
+          memory: 32M
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik_public
+        - traefik.http.routers.metallife.rule=Host(`metallife.com.br`) || Host(`www.metallife.com.br`)
+        - traefik.http.routers.metallife.entrypoints=websecure
+        - traefik.http.routers.metallife.tls=true
+        - traefik.http.routers.metallife.tls.certresolver=le
+        - traefik.http.services.metallife.loadbalancer.server.port=80
+
+networks:
+  traefik_public:
+    external: true
+
+volumes:
+  metallife_storage:

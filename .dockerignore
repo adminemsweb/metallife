@@ -1,0 +1,14 @@
+.git
+.github
+.env
+storage
+docs
+*.local
+public/img/produtos/*
+!public/img/produtos/IMG_8399.JPG
+!public/img/produtos/DSC00911.JPG
+!public/img/produtos/IMG_5579.JPG
+!public/img/produtos/IMG_9204.JPG
+!public/img/produtos/IMG_1167.JPG
+!public/img/produtos/IMG_8355.JPG
+!public/img/produtos/IMG_0297.JPG
