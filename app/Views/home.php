@@ -1,7 +1,7 @@
 <section class="video-hero desktop-landing" aria-labelledby="video-hero-title">
  <video class="video-hero-media" autoplay muted loop playsinline preload="metadata" poster="/assets/images/metal-life-processo-poster.jpg" data-hero-video aria-label="Processo industrial e equipamentos fabricados pela Metal Life">
-  <source src="/assets/videos/metal-life-processo.mp4" type="video/mp4" media="(min-width: 769px)">
-  Seu navegador n&atilde;o reproduz este v&iacute;deo. <a href="/assets/videos/metal-life-processo.mp4">Assista ao arquivo diretamente</a>.
+  <source src="/assets/videos/metal-life-processo.mp4?v=2" type="video/mp4" media="(min-width: 769px)">
+  Seu navegador n&atilde;o reproduz este v&iacute;deo. <a href="/assets/videos/metal-life-processo.mp4?v=2">Assista ao arquivo diretamente</a>.
  </video>
  <div class="video-hero-content wrap">
   <span class="eyebrow">Engenharia &middot; fabrica&ccedil;&atilde;o &middot; ind&uacute;stria</span>
@@ -12,7 +12,7 @@
 </section>
 <section class="mobile-home-hero mobile-landing" aria-labelledby="mobile-hero-title">
  <video class="mobile-home-hero-media" autoplay muted loop playsinline preload="metadata" poster="/assets/images/metal-life-processo-poster.jpg" aria-label="Processo industrial e equipamentos fabricados pela Metal Life">
-  <source src="/assets/videos/metal-life-processo-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+  <source src="/assets/videos/metal-life-processo-mobile.mp4?v=2" type="video/mp4" media="(max-width: 768px)">
  </video>
  <div class="mobile-home-hero-content">
   <span class="eyebrow">Engenharia &middot; fabrica&ccedil;&atilde;o</span>
@@ -34,7 +34,7 @@
    <p class="catalog-video-hint">Ative o v&iacute;deo para assistir com o som original.</p>
   </div>
   <video class="catalog-video" controls playsinline preload="metadata" poster="/assets/images/metal-life-processo-poster.jpg">
-   <source src="/assets/videos/metal-life-processo.mp4" type="video/mp4" media="(min-width: 769px)">
+   <source src="/assets/videos/metal-life-processo.mp4?v=2" type="video/mp4" media="(min-width: 769px)">
    Seu navegador n&atilde;o reproduz este v&iacute;deo.
   </video>
  </article>
@@ -61,7 +61,7 @@
  </header>
  <article class="mobile-process-card">
   <video controls playsinline preload="metadata" poster="/assets/images/metal-life-processo-poster.jpg">
-   <source src="/assets/videos/metal-life-processo-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+   <source src="/assets/videos/metal-life-processo-mobile.mp4?v=2" type="video/mp4" media="(max-width: 768px)">
    Seu navegador n&atilde;o reproduz este v&iacute;deo.
   </video>
   <div>
