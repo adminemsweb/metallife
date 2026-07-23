@@ -1,4 +1,6 @@
 (()=>{
+  document.documentElement.classList.add('motion-ready');
+
   const mobileMenu=document.querySelector('[data-mobile-menu]');
   const menuOpen=document.querySelector('[data-menu-open]');
   const menuClose=document.querySelector('[data-menu-close]');
@@ -72,4 +74,45 @@
     button.textContent='Enviando...';
   });
   document.querySelector('[data-focus-notice]')?.focus();
+
+  const revealItems=[...document.querySelectorAll('[data-reveal]')];
+  if('IntersectionObserver' in window){
+    const revealObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    },{threshold:.16,rootMargin:'0px 0px -7% 0px'});
+    revealItems.forEach(item=>revealObserver.observe(item));
+  }else{
+    revealItems.forEach(item=>item.classList.add('is-visible'));
+  }
+
+  document.querySelectorAll('[data-product-carousel]').forEach(carousel=>{
+    const track=carousel.querySelector('[data-carousel-track]');
+    const previous=carousel.querySelector('[data-carousel-previous]');
+    const next=carousel.querySelector('[data-carousel-next]');
+    if(!track||!previous||!next)return;
+
+    const cards=()=>[...track.children];
+    const step=()=>{
+      const first=cards()[0];
+      if(!first)return track.clientWidth;
+      const gap=parseFloat(getComputedStyle(track).columnGap)||0;
+      return first.getBoundingClientRect().width+gap;
+    };
+    const updateControls=()=>{
+      const tolerance=3;
+      previous.disabled=track.scrollLeft<=tolerance;
+      next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-tolerance;
+    };
+    const move=direction=>track.scrollBy({left:direction*step(),behavior:'smooth'});
+
+    previous.addEventListener('click',()=>move(-1));
+    next.addEventListener('click',()=>move(1));
+    track.addEventListener('scroll',updateControls,{passive:true});
+    window.addEventListener('resize',updateControls);
+    updateControls();
+  });
 })();
