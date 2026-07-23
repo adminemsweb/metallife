@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   web:
-    image: metallife:20260723
+    image: ${METALLIFE_IMAGE:-metallife:20260723}
     environment:
       APP_URL: https://metallife.com.br
     networks:

@@ -394,6 +394,30 @@ body::-webkit-scrollbar{
   letter-spacing:.01em;
 }
 .footer-contact-number:hover strong{color:#ff9560}
+.footer-contact-emails{
+  padding-top:14px;
+  display:grid;
+  gap:10px;
+}
+.footer-contact-emails a{
+  display:grid;
+  gap:3px;
+  color:#fff;
+  text-decoration:none;
+}
+.footer-contact-emails small{
+  color:rgb(255 255 255/.55);
+  font-size:.61rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.footer-contact-emails strong{
+  overflow-wrap:anywhere;
+  font-size:.82rem;
+  letter-spacing:.01em;
+}
+.footer-contact-emails a:hover strong{color:#ff9560}
 .footer-social-actions{
   margin-top:18px;
   display:grid;
