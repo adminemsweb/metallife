@@ -11,7 +11,7 @@ $organization=['@context'=>'https://schema.org','@type'=>'Organization','name'=>
 <link rel="canonical" href="<?=e($canonical)?>"><meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#102b46"><meta property="og:locale" content="pt_BR"><meta property="og:type" content="<?=e($seo['type'])?>"><meta property="og:site_name" content="Metal Life"><meta property="og:title" content="<?=e($plain($seo['title']))?>"><meta property="og:description" content="<?=e($plain($seo['description']))?>"><meta property="og:url" content="<?=e($canonical)?>"><meta property="og:image" content="<?=e(rtrim($app['base_url'],'/').'/images/cabines-pintura/cabine-pintura-eletrostatica-po.jpg')?>">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?=e($plain($seo['title']))?>"><meta name="twitter:description" content="<?=e($plain($seo['description']))?>">
-<link rel="icon" href="/favicon.png?v=3" type="image/png"><link rel="apple-touch-icon" href="/favicon.png?v=3"><link rel="manifest" href="/manifest.json?v=3"><link rel="stylesheet" href="/assets/css/site.css?v=5">
+<link rel="icon" href="/favicon.png?v=3" type="image/png"><link rel="apple-touch-icon" href="/favicon.png?v=3"><link rel="manifest" href="/manifest.json?v=3"><link rel="stylesheet" href="/assets/css/site.css?v=6">
 <script type="application/ld+json"><?=json_encode($organization,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script>
 </head><body>
 <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
