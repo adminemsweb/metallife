@@ -1,0 +1,3 @@
+<?php $items=$items??[];$list=[];foreach($items as $i=>$item){$list[]=['@type'=>'ListItem','position'=>$i+1,'name'=>html_entity_decode($item['label']),...($item['url']?['item'=>rtrim((require dirname(__DIR__,2).'/config/app.php')['base_url'],'/').$item['url']]:[])];} ?>
+<nav class="breadcrumb wrap" aria-label="Navega&ccedil;&atilde;o estrutural"><ol><?php foreach($items as $item):?><li><?php if($item['url']):?><a href="<?=e($item['url'])?>"><?=$item['label']?></a><?php else:?><span aria-current="page"><?=$item['label']?></span><?php endif;?></li><?php endforeach;?></ol></nav>
+<script type="application/ld+json"><?=json_encode(['@context'=>'https://schema.org','@type'=>'BreadcrumbList','itemListElement'=>$list],JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script>

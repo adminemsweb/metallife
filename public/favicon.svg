@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="METAL LIFE">
+  <rect width="64" height="64" fill="#112240"/>
+  <path d="M12 48V16h9l11 15 11-15h9v32H42V31L32 44 22 31v17H12Z" fill="#fff"/>
+  <path d="M12 54h40v4H12z" fill="#ff8a00"/>
+</svg>
