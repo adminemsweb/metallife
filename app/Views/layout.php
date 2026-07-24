@@ -3,7 +3,9 @@ $app=require dirname(__DIR__).'/config/app.php';
 $seo=$seo??['title'=>$app['title'],'description'=>$app['description'],'path'=>current_path(),'type'=>'website'];
 $plain=static fn(string $value):string=>html_entity_decode(strip_tags($value),ENT_QUOTES|ENT_HTML5,'UTF-8');
 $canonical=rtrim($app['base_url'],'/').$seo['path'];
-$organization=['@context'=>'https://schema.org','@type'=>'Organization','name'=>'Metal Life','url'=>rtrim($app['base_url'],'/'),'logo'=>rtrim($app['base_url'],'/').'/img/metal-life-logo.png','telephone'=>'+55 11 96919-5102','sameAs'=>['https://www.instagram.com/mettal.life/']];
+$siteUrl=rtrim($app['base_url'],'/');
+$organization=['@context'=>'https://schema.org','@type'=>'Organization','@id'=>$siteUrl.'/#organization','name'=>'Metal Life','alternateName'=>'Metal Life Industrial','url'=>$siteUrl.'/','logo'=>['@type'=>'ImageObject','url'=>$siteUrl.'/img/metal-life-logo.png','width'=>1200,'height'=>1200],'description'=>$plain('Fabricante de caixas met&aacute;licas, gabinetes, quadros el&eacute;tricos e cabines de pintura industrial sob medida.'),'email'=>'contato@metallife.com.br','telephone'=>'+55 11 96919-5102','sameAs'=>['https://www.instagram.com/mettal.life/']];
+$website=['@context'=>'https://schema.org','@type'=>'WebSite','@id'=>$siteUrl.'/#website','url'=>$siteUrl.'/','name'=>'Metal Life','alternateName'=>['Metal Life Industrial','metallife.com.br'],'publisher'=>['@id'=>$siteUrl.'/#organization'],'inLanguage'=>'pt-BR'];
 ?>
 <!doctype html><html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +13,13 @@ $organization=['@context'=>'https://schema.org','@type'=>'Organization','name'=>
 <link rel="canonical" href="<?=e($canonical)?>"><meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#102b46"><meta property="og:locale" content="pt_BR"><meta property="og:type" content="<?=e($seo['type'])?>"><meta property="og:site_name" content="Metal Life"><meta property="og:title" content="<?=e($plain($seo['title']))?>"><meta property="og:description" content="<?=e($plain($seo['description']))?>"><meta property="og:url" content="<?=e($canonical)?>"><meta property="og:image" content="<?=e(rtrim($app['base_url'],'/').'/images/cabines-pintura/cabine-pintura-eletrostatica-po.jpg')?>">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?=e($plain($seo['title']))?>"><meta name="twitter:description" content="<?=e($plain($seo['description']))?>">
-<link rel="icon" href="/favicon.png?v=3" type="image/png"><link rel="apple-touch-icon" href="/favicon.png?v=3"><link rel="manifest" href="/manifest.json?v=3"><link rel="stylesheet" href="/assets/css/site.css?v=19">
+<link rel="icon" href="/favicon.png?v=3" type="image/png"><link rel="apple-touch-icon" href="/favicon.png?v=3"><link rel="manifest" href="/manifest.json?v=3"><link rel="stylesheet" href="/assets/css/site.css?v=20">
 <script type="application/ld+json"><?=json_encode($organization,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script>
+<?php if($seo['path']==='/'):?><script type="application/ld+json"><?=json_encode($website,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script><?php endif;?>
 </head><body>
 <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
 <header class="site-header"><div class="header-inner">
- <div class="site-logo" aria-label="Metal Life"><img src="/img/metal-life-logo.png" width="62" height="62" alt="Metal Life"></div>
+ <a class="site-logo" href="/" aria-label="Metal Life &mdash; p&aacute;gina inicial"><img src="/img/metal-life-logo.png" width="62" height="62" alt="Metal Life"></a>
  <nav class="desktop-nav" aria-label="Navega&ccedil;&atilde;o principal">
   <a class="<?=e(active_path('/'))?>" href="/">In&iacute;cio</a>
   <a class="<?=e(active_path('/empresa'))?>" href="/empresa">A Metal Life</a>

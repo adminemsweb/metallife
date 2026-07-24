@@ -1,7 +1,8 @@
 <section class="cabine-hero" aria-labelledby="cabine-hero-title">
  <div class="cabine-hero-copy">
-  <span class="cabine-hero-kicker">Engenharia industrial Metal Life</span>
-  <h1 id="cabine-hero-title">Robustez por fora.<br>Precis&atilde;o em cada detalhe.</h1>
+  <span class="cabine-hero-kicker">Caixas met&aacute;licas &bull; Gabinetes &bull; Cabines de pintura</span>
+  <h1 id="cabine-hero-title"><span class="cabine-hero-brand">Metal Life</span><span class="cabine-hero-descriptor">Solu&ccedil;&otilde;es met&aacute;licas sob medida para a ind&uacute;stria.</span></h1>
+  <p class="cabine-hero-description">Projetamos e fabricamos estruturas para pain&eacute;is el&eacute;tricos, automa&ccedil;&atilde;o e processos de pintura industrial conforme a necessidade de cada aplica&ccedil;&atilde;o.</p>
   <span class="cabine-hero-line" aria-hidden="true"></span>
  </div>
  <div class="cabine-hero-gallery">

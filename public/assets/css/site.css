@@ -1895,6 +1895,22 @@ iframe{
   letter-spacing:-.058em;
   text-wrap:balance;
 }
+.cabine-hero-brand,
+.cabine-hero-descriptor{display:block}
+.cabine-hero-descriptor{
+  max-width:19ch;
+  margin-top:15px;
+  font-size:.58em;
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+.cabine-hero-description{
+  max-width:590px;
+  margin:27px 0 0;
+  color:rgb(255 255 255/.68);
+  font-size:.98rem;
+  line-height:1.7;
+}
 .cabine-hero-line{
   width:88px;
   height:4px;
@@ -1988,9 +2004,18 @@ iframe{
   .cabine-hero-copy{padding:54px 18px 42px}
   .cabine-hero-kicker{margin-bottom:18px;font-size:.65rem}
   .cabine-hero-copy h1{
-    max-width:11ch;
+    max-width:none;
     font-size:clamp(2.35rem,10vw,3.5rem);
     line-height:.95;
+  }
+  .cabine-hero-descriptor{
+    max-width:18ch;
+    margin-top:12px;
+    font-size:.6em;
+  }
+  .cabine-hero-description{
+    margin-top:22px;
+    font-size:.9rem;
   }
   .cabine-hero-line{margin-top:26px}
   .cabine-hero-gallery{
