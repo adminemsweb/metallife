@@ -5,9 +5,9 @@
   <span class="cabine-hero-line" aria-hidden="true"></span>
  </div>
  <div class="cabine-hero-gallery">
-  <figure class="cabine-hero-photo cabine-hero-photo-primary" tabindex="0"><img src="/img/cabine.jpeg" width="960" height="1280" fetchpriority="high" alt="Cabine industrial Metal Life vista de frente"></figure>
-  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine2.jpeg" width="960" height="1280" fetchpriority="high" alt="Detalhe interno da cabine industrial Metal Life"></figure>
-  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine3.jpeg" width="960" height="1280" fetchpriority="high" alt="Acabamento lateral da cabine industrial Metal Life"></figure>
+  <figure class="cabine-hero-photo cabine-hero-photo-primary" tabindex="0"><img src="/img/cabine.jpeg" width="960" height="1280" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente"></figure>
+  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine2.jpeg" width="960" height="1280" fetchpriority="high" alt="Detalhe interno do gabinete met&aacute;lico personalizado Metal Life"></figure>
+  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine3.jpeg" width="960" height="1280" fetchpriority="high" alt="Acabamento lateral do gabinete met&aacute;lico personalizado Metal Life"></figure>
  </div>
 </section>
 <section class="focus-showcase" id="focos" aria-labelledby="focus-showcase-title"><div class="wrap">
@@ -19,8 +19,8 @@
  <div class="focus-showcase-grid">
   <article class="focus-showcase-item" data-reveal>
    <strong class="focus-showcase-index" aria-hidden="true">01</strong>
-   <img src="/img/foco.jpeg" width="1398" height="683" loading="lazy" alt="Gabinete modular com trilhos adaptativos, fundo remov&iacute;vel e painel personalizado">
-   <div class="focus-showcase-meta"><strong>Gabinete modular</strong><a class="focus-showcase-link" href="/detalhes/gabinete-modular">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
+   <img src="/img/foco.jpeg" width="1398" height="683" loading="lazy" alt="Gabinete met&aacute;lico personalizado com portas remov&iacute;veis, trilhos adaptativos e fundo remov&iacute;vel">
+   <div class="focus-showcase-meta"><strong>Gabinete personalizado</strong><a class="focus-showcase-link" href="/detalhes/gabinete-modular">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
   </article>
   <article class="focus-showcase-item" data-reveal>
    <strong class="focus-showcase-index" aria-hidden="true">02</strong>

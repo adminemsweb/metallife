@@ -3,38 +3,82 @@
  ['label'=>'Detalhes construtivos','url'=>'/#focos'],
  ['label'=>$feature['name'],'url'=>null],
 ];require __DIR__.'/partials/breadcrumb.php';?>
-<section class="feature-detail-intro wrap">
- <div>
-  <span class="eyebrow">Detalhes construtivos</span>
+<section class="feature-product-hero wrap">
+ <div class="feature-product-hero-copy">
+  <span class="eyebrow"><?=$feature['eyebrow']??'Detalhes construtivos'?></span>
   <h1><?=$feature['name']?></h1>
   <p><?=$feature['intro']?></p>
-  <a class="text-link" href="/#focos">&larr; Voltar aos destaques</a>
+  <?php if(!empty($feature['overview'])):?>
+  <div class="feature-product-summary">
+   <?php foreach($feature['overview'] as $paragraph):?><p><?=$paragraph?></p><?php endforeach;?>
+  </div>
+  <?php endif;?>
+  <div class="feature-product-actions">
+   <a class="button button-primary" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento</a>
+   <a class="text-link" href="/#focos">&larr; Voltar aos destaques</a>
+  </div>
  </div>
+ <figure class="feature-product-hero-visual">
+  <?php $primaryPhoto=$feature['gallery'][0];?>
+  <img src="<?=e($primaryPhoto['src'])?>" width="<?=$primaryPhoto['width']?>" height="<?=$primaryPhoto['height']?>" alt="<?=e(html_entity_decode($primaryPhoto['alt']))?>">
+  <figcaption>
+   <span>01</span>
+   <strong><?=$feature['overview_title']??'Solu&ccedil;&atilde;o desenvolvida para o projeto'?></strong>
+  </figcaption>
+ </figure>
 </section>
-<section class="feature-detail-content wrap">
- <div class="feature-detail-photo-stack">
-  <?php foreach($feature['gallery'] as $photo):?>
-  <figure>
-   <img src="<?=e($photo['src'])?>" width="<?=$photo['width']?>" height="<?=$photo['height']?>" alt="<?=e(html_entity_decode($photo['alt']))?>">
-  </figure>
-  <?php endforeach;?>
- </div>
- <aside class="feature-detail-information" aria-labelledby="feature-information-title">
-  <header>
-   <span class="eyebrow">Informa&ccedil;&otilde;es do equipamento</span>
-   <h2 id="feature-information-title">Detalhes do <?=$feature['name']?></h2>
+<section class="feature-specifications">
+ <div class="wrap feature-specifications-layout">
+  <header class="feature-specifications-heading">
+   <span class="eyebrow">Diferenciais construtivos</span>
+   <h2 id="feature-information-title">Projetado para facilitar cada etapa</h2>
+   <p>Recursos pensados para dar flexibilidade &agrave; montagem, organizar os componentes e simplificar o acesso t&eacute;cnico.</p>
   </header>
-  <div class="feature-information-list" role="list">
+  <div class="feature-specifications-list" role="list" aria-labelledby="feature-information-title">
    <?php foreach($feature['items'] as $index=>$item):?>
    <article role="listitem">
     <span aria-hidden="true"><?=str_pad((string)($index+1),2,'0',STR_PAD_LEFT)?></span>
-    <h3><?=$item['title']?></h3>
-    <p><?=$item['text']?></p>
+    <div><h3><?=$item['title']?></h3><p><?=$item['text']?></p></div>
    </article>
    <?php endforeach;?>
   </div>
- </aside>
+ </div>
 </section>
+<?php if(count($feature['gallery'])>1):?>
+<section class="feature-gallery wrap" aria-labelledby="feature-gallery-title">
+ <header>
+  <span class="eyebrow">Outros &acirc;ngulos</span>
+  <h2 id="feature-gallery-title">Constru&ccedil;&atilde;o vista em detalhes</h2>
+ </header>
+ <div class="feature-gallery-grid">
+  <?php foreach(array_slice($feature['gallery'],1) as $index=>$photo):?>
+  <figure>
+   <img src="<?=e($photo['src'])?>" width="<?=$photo['width']?>" height="<?=$photo['height']?>" loading="lazy" alt="<?=e(html_entity_decode($photo['alt']))?>">
+   <figcaption><?=str_pad((string)($index+2),2,'0',STR_PAD_LEFT)?> / <?=$feature['name']?></figcaption>
+  </figure>
+  <?php endforeach;?>
+ </div>
+</section>
+<?php endif;?>
+<?php if(!empty($feature['finish_options'])):?>
+<section class="feature-finishes-section">
+ <div class="wrap feature-finishes-layout">
+  <div>
+   <span class="eyebrow">Acabamento personalizado</span>
+   <h2>Cores para a necessidade e a identidade do projeto</h2>
+   <p><?=$feature['finish_intro']?></p>
+  </div>
+  <ul class="feature-finish-options" aria-label="Exemplos de cores dispon&iacute;veis">
+   <?php foreach($feature['finish_options'] as $finish):?>
+   <li>
+    <span style="--finish-color:<?=e($finish['color'])?>" aria-hidden="true"></span>
+    <?=$finish['name']?>
+   </li>
+   <?php endforeach;?>
+  </ul>
+ </div>
+</section>
+<?php endif;?>
 <section class="feature-benefits-section">
  <div class="wrap feature-benefits-layout">
   <div>
@@ -58,4 +102,8 @@
   <ul><?php foreach($feature['project_info'] as $information):?><li><?=$information?></li><?php endforeach;?></ul>
  </div>
 </section>
-<?php $ctaTitle='Quer desenvolver uma solu&ccedil;&atilde;o como esta para o seu projeto?';$ctaText='Converse com a Metal Life e envie as informa&ccedil;&otilde;es da sua aplica&ccedil;&atilde;o.';require __DIR__.'/partials/cta.php';?>
+<?php
+$ctaTitle=$feature['cta_title']??'Quer desenvolver uma solu&ccedil;&atilde;o como esta para o seu projeto?';
+$ctaText=$feature['cta_text']??'Converse com a Metal Life e envie as informa&ccedil;&otilde;es da sua aplica&ccedil;&atilde;o.';
+require __DIR__.'/partials/cta.php';
+?>
