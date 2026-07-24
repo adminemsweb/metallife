@@ -7,7 +7,6 @@
  </div>
  <div class="cabine-hero-gallery">
   <figure class="cabine-hero-photo cabine-hero-photo-primary"><img src="/img/site/cabine2.webp" width="1024" height="1536" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente"></figure>
-  <figure class="cabine-hero-photo cabine-hero-photo-detail"><img src="/img/site/cabine.webp" width="1024" height="1536" fetchpriority="high" alt="Vista lateral do gabinete met&aacute;lico personalizado Metal Life"></figure>
  </div>
 </section>
 <section class="focus-showcase" id="focos" aria-labelledby="focus-showcase-title"><div class="wrap">

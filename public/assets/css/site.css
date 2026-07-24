@@ -1940,15 +1940,7 @@ iframe{
 }
 .cabine-hero-photo-primary{
   z-index:2;
-  inset:0 29% 22px 2%;
-}
-.cabine-hero-photo-detail{
-  z-index:1;
-  right:2%;
-  bottom:9%;
-  width:34%;
-  height:62%;
-  opacity:.78;
+  inset:0 10% 22px;
 }
 .cabine-hero-photo img{
   width:100%;
@@ -1987,8 +1979,7 @@ iframe{
   }
   .cabine-hero-copy{padding-inline:18px}
   .cabine-hero-copy h1{font-size:clamp(2.75rem,5.8vw,4.5rem)}
-  .cabine-hero-photo-primary{inset-inline:0 27%}
-  .cabine-hero-photo-detail{right:0;width:33%}
+  .cabine-hero-photo-primary{inset-inline:7%}
 }
 
 @media(max-width:768px){
@@ -2033,10 +2024,7 @@ iframe{
     transform:none;
   }
   .cabine-hero-photo-primary{
-    inset:0 5% 20px;
-  }
-  .cabine-hero-photo-detail{
-    display:none;
+    inset:0 8% 20px;
   }
   .cabine-hero-photo:hover img{transform:none}
 }
