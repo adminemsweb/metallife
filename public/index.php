@@ -11,7 +11,7 @@ spl_autoload_register(static function(string $class):void{$prefix='App\\';if(!st
 Env::load(dirname(__DIR__).'/.env');
 $controller=new SiteController();$router=new Router();
 
-$router->get('/',fn()=>$controller->page('home',['seo'=>$controller->seo('Metal Life | Caixas Met&aacute;licas e Solu&ccedil;&otilde;es Industriais','A Metal Life fabrica caixas met&aacute;licas, gabinetes, quadros el&eacute;tricos e cabines de pintura industrial sob medida para cada projeto.','/')]));
+$router->get('/',fn()=>$controller->page('home',['seo'=>$controller->seo('Metal Life','A Metal Life fabrica caixas met&aacute;licas, gabinetes, quadros el&eacute;tricos e cabines de pintura industrial sob medida para cada projeto.','/')]));
 $router->get('/empresa',fn()=>$controller->page('company',['seo'=>$controller->seo('Sobre a Metal Life | Engenharia Industrial','Conhe&ccedil;a a atua&ccedil;&atilde;o da Metal Life em solu&ccedil;&otilde;es met&aacute;licas e equipamentos para processos industriais.','/empresa')]));
 $router->get('/produtos',fn()=>$controller->page('products',['seo'=>$controller->seo('Produtos Industriais Sob Medida | Metal Life','Conhe&ccedil;a caixas met&aacute;licas, gabinetes, quadros, cabines de pintura e estufas para aplica&ccedil;&otilde;es industriais.','/produtos')]));
 $router->get('/caixas-metalicas-paineis-eletricos',fn()=>$controller->page('category-boxes',['seo'=>$controller->seo('Caixa Met&aacute;lica para Painel El&eacute;trico | Metal Life','Caixas met&aacute;licas para pain&eacute;is el&eacute;tricos, quadros e gabinetes industriais sob medida. Conhe&ccedil;a as solu&ccedil;&otilde;es Metal Life.','/caixas-metalicas-paineis-eletricos')]));
