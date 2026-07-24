@@ -7,15 +7,30 @@
   <div class="cabine-hero-actions"><a class="button button-primary" href="/solicitar-orcamento">Solicitar or&ccedil;amento</a><a class="cabine-hero-link" href="/detalhes/gabinete-modular">Conhecer solu&ccedil;&otilde;es <span aria-hidden="true">&rarr;</span></a></div>
  </div>
  <div class="cabine-hero-gallery" data-cabine-gallery data-active-color="orange">
-  <figure class="cabine-hero-photo cabine-hero-photo-primary"><img src="/img/site/cabine2.webp" width="1024" height="1536" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente"></figure>
+  <figure class="cabine-hero-photo cabine-hero-photo-primary" data-cabine-render>
+   <img src="/img/site/cabine2.webp" width="1024" height="1536" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente" data-cabine-source>
+   <canvas data-cabine-canvas aria-hidden="true"></canvas>
+  </figure>
   <div class="cabine-color-picker" data-cabine-colors>
-   <span class="cabine-color-picker-title">Personalize a cor <strong data-cabine-color-name>Laranja</strong></span>
-   <div class="cabine-color-options" role="group" aria-label="Escolha a cor do painel">
-    <button class="is-active" type="button" data-cabine-color="orange" data-color-name="Laranja" aria-label="Painel laranja" aria-pressed="true"><span style="--swatch:#ed5b12" aria-hidden="true"></span></button>
-    <button type="button" data-cabine-color="red" data-color-name="Vermelho" aria-label="Painel vermelho" aria-pressed="false"><span style="--swatch:#dc2828" aria-hidden="true"></span></button>
-    <button type="button" data-cabine-color="yellow" data-color-name="Amarelo" aria-label="Painel amarelo" aria-pressed="false"><span style="--swatch:#f1c928" aria-hidden="true"></span></button>
-    <button type="button" data-cabine-color="green" data-color-name="Verde" aria-label="Painel verde" aria-pressed="false"><span style="--swatch:#24a84a" aria-hidden="true"></span></button>
-    <button type="button" data-cabine-color="blue" data-color-name="Azul" aria-label="Painel azul" aria-pressed="false"><span style="--swatch:#1769c2" aria-hidden="true"></span></button>
+   <div class="cabine-color-picker-title"><span>Personalize seu gabinete</span><strong>Monte sua combina&ccedil;&atilde;o</strong></div>
+   <div class="cabine-color-row">
+    <span class="cabine-color-label">Painel <strong data-cabine-panel-name>Laranja</strong></span>
+    <div class="cabine-color-options" role="group" aria-label="Escolha a cor do painel">
+     <button class="is-active" type="button" data-cabine-panel="orange" data-color-name="Laranja" aria-label="Painel laranja" aria-pressed="true"><span class="swatch-orange" aria-hidden="true"></span></button>
+     <button type="button" data-cabine-panel="red" data-color-name="Vermelho" aria-label="Painel vermelho" aria-pressed="false"><span class="swatch-red" aria-hidden="true"></span></button>
+     <button type="button" data-cabine-panel="yellow" data-color-name="Amarelo" aria-label="Painel amarelo" aria-pressed="false"><span class="swatch-yellow" aria-hidden="true"></span></button>
+     <button type="button" data-cabine-panel="green" data-color-name="Verde" aria-label="Painel verde" aria-pressed="false"><span class="swatch-green" aria-hidden="true"></span></button>
+     <button type="button" data-cabine-panel="blue" data-color-name="Azul" aria-label="Painel azul" aria-pressed="false"><span class="swatch-blue" aria-hidden="true"></span></button>
+    </div>
+   </div>
+   <div class="cabine-color-row">
+    <span class="cabine-color-label">Estrutura <strong data-cabine-frame-name>Cinza</strong></span>
+    <div class="cabine-color-options" role="group" aria-label="Escolha a cor da estrutura">
+     <button class="is-active" type="button" data-cabine-frame="gray" data-color-name="Cinza" aria-label="Estrutura cinza" aria-pressed="true"><span class="swatch-gray" aria-hidden="true"></span></button>
+     <button type="button" data-cabine-frame="white" data-color-name="Branca" aria-label="Estrutura branca" aria-pressed="false"><span class="swatch-white" aria-hidden="true"></span></button>
+     <button type="button" data-cabine-frame="graphite" data-color-name="Grafite" aria-label="Estrutura grafite" aria-pressed="false"><span class="swatch-graphite" aria-hidden="true"></span></button>
+     <button type="button" data-cabine-frame="navy" data-color-name="Azul" aria-label="Estrutura azul" aria-pressed="false"><span class="swatch-navy" aria-hidden="true"></span></button>
+    </div>
    </div>
   </div>
  </div>
