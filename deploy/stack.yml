@@ -36,6 +36,16 @@ services:
         - traefik.http.routers.metallife.entrypoints=websecure
         - traefik.http.routers.metallife.tls=true
         - traefik.http.routers.metallife.tls.certresolver=le
+        - traefik.http.routers.metallife-quote.rule=(Host(`metallife.com.br`) || Host(`www.metallife.com.br`)) && Path(`/solicitar-orcamento`)
+        - traefik.http.routers.metallife-quote.entrypoints=websecure
+        - traefik.http.routers.metallife-quote.tls=true
+        - traefik.http.routers.metallife-quote.tls.certresolver=le
+        - traefik.http.routers.metallife-quote.priority=100
+        - traefik.http.routers.metallife-quote.service=metallife
+        - traefik.http.routers.metallife-quote.middlewares=metallife-quote-rate
+        - traefik.http.middlewares.metallife-quote-rate.ratelimit.average=12
+        - traefik.http.middlewares.metallife-quote-rate.ratelimit.period=1m
+        - traefik.http.middlewares.metallife-quote-rate.ratelimit.burst=20
         - traefik.http.services.metallife.loadbalancer.server.port=80
 
 networks:

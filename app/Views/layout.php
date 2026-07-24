@@ -14,8 +14,8 @@ $website=['@context'=>'https://schema.org','@type'=>'WebSite','@id'=>$siteUrl.'/
 <meta name="theme-color" content="#102b46"><meta property="og:locale" content="pt_BR"><meta property="og:type" content="<?=e($seo['type'])?>"><meta property="og:site_name" content="Metal Life"><meta property="og:title" content="<?=e($plain($seo['title']))?>"><meta property="og:description" content="<?=e($plain($seo['description']))?>"><meta property="og:url" content="<?=e($canonical)?>"><meta property="og:image" content="<?=e(rtrim($app['base_url'],'/').'/images/cabines-pintura/cabine-pintura-eletrostatica-po.jpg')?>">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?=e($plain($seo['title']))?>"><meta name="twitter:description" content="<?=e($plain($seo['description']))?>">
 <link rel="icon" href="/favicon.png?v=3" type="image/png"><link rel="apple-touch-icon" href="/favicon.png?v=3"><link rel="manifest" href="/manifest.json?v=3"><link rel="stylesheet" href="/assets/css/site.css?v=20">
-<script type="application/ld+json"><?=json_encode($organization,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script>
-<?php if($seo['path']==='/'):?><script type="application/ld+json"><?=json_encode($website,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script><?php endif;?>
+<script type="application/ld+json" nonce="<?=e($cspNonce)?>"><?=json_encode($organization,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script>
+<?php if($seo['path']==='/'):?><script type="application/ld+json" nonce="<?=e($cspNonce)?>"><?=json_encode($website,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE)?></script><?php endif;?>
 </head><body>
 <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
 <header class="site-header"><div class="header-inner">

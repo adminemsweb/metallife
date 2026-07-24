@@ -5,6 +5,7 @@ RUN a2enmod headers rewrite
 WORKDIR /var/www/html
 
 COPY docker/apache-vhost.conf /etc/apache2/sites-available/000-default.conf
+COPY docker/php-security.ini /usr/local/etc/php/conf.d/zz-security.ini
 COPY . /var/www/html
 COPY docker/entrypoint.sh /usr/local/bin/metallife-entrypoint
 
