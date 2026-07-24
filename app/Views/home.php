@@ -4,7 +4,7 @@
   <h1 id="cabine-hero-title"><span class="cabine-hero-brand">Metal Life</span><span class="cabine-hero-descriptor">Solu&ccedil;&otilde;es met&aacute;licas sob medida para a ind&uacute;stria.</span></h1>
   <p class="cabine-hero-description">Projetamos e fabricamos estruturas para pain&eacute;is el&eacute;tricos, automa&ccedil;&atilde;o e processos de pintura industrial conforme a necessidade de cada aplica&ccedil;&atilde;o.</p>
   <span class="cabine-hero-line" aria-hidden="true"></span>
-  <div class="cabine-hero-actions"><a class="button button-primary" href="/solicitar-orcamento">Solicitar or&ccedil;amento</a><a class="cabine-hero-link" href="/produtos">Conhecer solu&ccedil;&otilde;es <span aria-hidden="true">&rarr;</span></a></div>
+  <div class="cabine-hero-actions"><a class="button button-primary" href="/solicitar-orcamento">Solicitar or&ccedil;amento</a><a class="cabine-hero-link" href="/detalhes/gabinete-modular">Conhecer solu&ccedil;&otilde;es <span aria-hidden="true">&rarr;</span></a></div>
  </div>
  <div class="cabine-hero-gallery">
   <figure class="cabine-hero-photo cabine-hero-photo-primary"><img src="/img/site/cabine2.webp" width="1024" height="1536" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente"></figure>
