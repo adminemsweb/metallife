@@ -6,8 +6,18 @@
   <span class="cabine-hero-line" aria-hidden="true"></span>
   <div class="cabine-hero-actions"><a class="button button-primary" href="/solicitar-orcamento">Solicitar or&ccedil;amento</a><a class="cabine-hero-link" href="/detalhes/gabinete-modular">Conhecer solu&ccedil;&otilde;es <span aria-hidden="true">&rarr;</span></a></div>
  </div>
- <div class="cabine-hero-gallery">
+ <div class="cabine-hero-gallery" data-cabine-gallery data-active-color="orange">
   <figure class="cabine-hero-photo cabine-hero-photo-primary"><img src="/img/site/cabine2.webp" width="1024" height="1536" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente"></figure>
+  <div class="cabine-color-picker" data-cabine-colors>
+   <span class="cabine-color-picker-title">Personalize a cor <strong data-cabine-color-name>Laranja</strong></span>
+   <div class="cabine-color-options" role="group" aria-label="Escolha a cor do painel">
+    <button class="is-active" type="button" data-cabine-color="orange" data-color-name="Laranja" aria-label="Painel laranja" aria-pressed="true"><span style="--swatch:#ed5b12" aria-hidden="true"></span></button>
+    <button type="button" data-cabine-color="red" data-color-name="Vermelho" aria-label="Painel vermelho" aria-pressed="false"><span style="--swatch:#dc2828" aria-hidden="true"></span></button>
+    <button type="button" data-cabine-color="yellow" data-color-name="Amarelo" aria-label="Painel amarelo" aria-pressed="false"><span style="--swatch:#f1c928" aria-hidden="true"></span></button>
+    <button type="button" data-cabine-color="green" data-color-name="Verde" aria-label="Painel verde" aria-pressed="false"><span style="--swatch:#24a84a" aria-hidden="true"></span></button>
+    <button type="button" data-cabine-color="blue" data-color-name="Azul" aria-label="Painel azul" aria-pressed="false"><span style="--swatch:#1769c2" aria-hidden="true"></span></button>
+   </div>
+  </div>
  </div>
 </section>
 <section class="focus-showcase" id="focos" aria-labelledby="focus-showcase-title"><div class="wrap">

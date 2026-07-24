@@ -115,4 +115,45 @@
     window.addEventListener('resize',updateControls);
     updateControls();
   });
+
+  document.querySelectorAll('[data-cabine-colors]').forEach(picker=>{
+    const gallery=picker.closest('[data-cabine-gallery]');
+    const buttons=[...picker.querySelectorAll('[data-cabine-color]')];
+    const colorName=picker.querySelector('[data-cabine-color-name]');
+    if(!gallery||!buttons.length)return;
+
+    let activeIndex=0;
+    let cycleTimer=null;
+    const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const selectColor=index=>{
+      activeIndex=(index+buttons.length)%buttons.length;
+      const activeButton=buttons[activeIndex];
+      gallery.dataset.activeColor=activeButton.dataset.cabineColor;
+      if(colorName)colorName.textContent=activeButton.dataset.colorName;
+      buttons.forEach((button,buttonIndex)=>{
+        const isActive=buttonIndex===activeIndex;
+        button.classList.toggle('is-active',isActive);
+        button.setAttribute('aria-pressed',String(isActive));
+      });
+    };
+    const startCycle=()=>{
+      if(reduceMotion)return;
+      window.clearInterval(cycleTimer);
+      cycleTimer=window.setInterval(()=>selectColor(activeIndex+1),2800);
+    };
+
+    buttons.forEach((button,index)=>{
+      button.addEventListener('click',()=>{
+        selectColor(index);
+        startCycle();
+      });
+    });
+    picker.addEventListener('mouseenter',()=>window.clearInterval(cycleTimer));
+    picker.addEventListener('mouseleave',startCycle);
+    picker.addEventListener('focusin',()=>window.clearInterval(cycleTimer));
+    picker.addEventListener('focusout',event=>{
+      if(!picker.contains(event.relatedTarget))startCycle();
+    });
+    startCycle();
+  });
 })();
