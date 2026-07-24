@@ -6,9 +6,8 @@
   <span class="cabine-hero-line" aria-hidden="true"></span>
  </div>
  <div class="cabine-hero-gallery">
-  <figure class="cabine-hero-photo cabine-hero-photo-primary" tabindex="0"><img src="/img/cabine.jpeg" width="960" height="1280" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente"></figure>
-  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine2.jpeg" width="960" height="1280" fetchpriority="high" alt="Detalhe interno do gabinete met&aacute;lico personalizado Metal Life"></figure>
-  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine3.jpeg" width="960" height="1280" fetchpriority="high" alt="Acabamento lateral do gabinete met&aacute;lico personalizado Metal Life"></figure>
+  <figure class="cabine-hero-photo cabine-hero-photo-primary"><img src="/img/site/cabine2.webp" width="1024" height="1536" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente"></figure>
+  <figure class="cabine-hero-photo cabine-hero-photo-detail"><img src="/img/site/cabine.webp" width="1024" height="1536" fetchpriority="high" alt="Vista lateral do gabinete met&aacute;lico personalizado Metal Life"></figure>
  </div>
 </section>
 <section class="focus-showcase" id="focos" aria-labelledby="focus-showcase-title"><div class="wrap">
