@@ -23,6 +23,7 @@ $router->get('/contato',fn()=>$controller->page('contact',['seo'=>$controller->s
 $router->get('/politica-de-privacidade',fn()=>$controller->page('privacy',['seo'=>$controller->seo('Pol&iacute;tica de Privacidade | Metal Life','Saiba como a Metal Life trata os dados enviados pelos formul&aacute;rios deste site.','/politica-de-privacidade')]));
 $router->get('/404',fn()=>$controller->notFound());
 $site=require dirname(__DIR__).'/app/Data/site.php';
+foreach(array_keys($site['features']) as $slug){$router->get('/detalhes/'.$slug,fn()=>$controller->feature($slug));}
 foreach(array_keys($site['products']) as $slug){$router->get('/'.$slug,fn()=>$controller->product($slug));}
 foreach(array_keys($site['articles']) as $slug){$router->get('/conteudo-tecnico/'.$slug,fn()=>$controller->article($slug));}
 $redirect=static function(string $path):void{header('Location: '.$path,true,301);};

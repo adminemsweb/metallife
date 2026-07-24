@@ -10,6 +10,7 @@ final class SiteController
     public function page(string $template,array $data=[]):void{ View::render($template,['site'=>$this->site,...$data]); }
     public function seo(string $title,string $description,string $path,string $type='website'):array{return compact('title','description','path','type');}
     public function product(string $slug):void{ $p=$this->site['products'][$slug]??null; if(!$p){$this->notFound();return;} $this->page('product',['product'=>$p,'slug'=>$slug,'seo'=>$this->seo($p['title'],$p['description'],'/'.$slug)]);}
+    public function feature(string $slug):void{ $f=$this->site['features'][$slug]??null; if(!$f){$this->notFound();return;} $this->page('feature-detail',['feature'=>$f,'slug'=>$slug,'seo'=>$this->seo($f['title'],$f['description'],'/detalhes/'.$slug)]);}
     public function article(string $slug):void{ $a=$this->site['articles'][$slug]??null;if(!$a){$this->notFound();return;} $d='Crit&eacute;rios para avaliar '.html_entity_decode($a['keyword']).' com apoio t&eacute;cnico e sem respostas gen&eacute;ricas.';$this->page('article',['article'=>$a,'slug'=>$slug,'seo'=>$this->seo(strip_tags(html_entity_decode($a['title'])).' | Metal Life',$d,'/conteudo-tecnico/'.$slug,'article')]);}
     public function notFound():void{http_response_code(404);$this->page('404',['seo'=>$this->seo('P&aacute;gina n&atilde;o encontrada | Metal Life','A p&aacute;gina solicitada n&atilde;o foi encontrada.','/404')]);}
     public function quote():void

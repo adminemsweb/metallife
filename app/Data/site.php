@@ -31,4 +31,80 @@ $articleTitles = [
 ];
 $articles=[];
 foreach($articleTitles as $slug=>$a){$articles[$slug]=['title'=>$a[0],'category'=>$a[1],'keyword'=>$a[2],'related'=>$a[3]];}
-return ['products'=>$products,'articles'=>$articles];
+$features=[
+ 'gabinete-modular'=>[
+  'name'=>'Gabinete modular',
+  'title'=>'Gabinete modular | Detalhes construtivos | Metal Life',
+  'description'=>'Conhe&ccedil;a os detalhes construtivos do gabinete modular Metal Life: trilhos adaptativos, fundo remov&iacute;vel, pain&eacute;is personalizados e espa&ccedil;o interno.',
+  'image'=>'/img/cabine.jpeg',
+  'image_width'=>960,
+  'image_height'=>1280,
+  'alt'=>'Fotografia real do gabinete modular Metal Life aberto, com estrutura cinza e painel interno laranja',
+  'gallery'=>[
+   ['src'=>'/img/cabine.jpeg','width'=>960,'height'=>1280,'alt'=>'Vista frontal do gabinete modular Metal Life aberto'],
+   ['src'=>'/img/cabine2.jpeg','width'=>960,'height'=>1280,'alt'=>'Detalhe dos trilhos e do painel interno do gabinete modular Metal Life'],
+   ['src'=>'/img/cabine3.jpeg','width'=>960,'height'=>1280,'alt'=>'Vista lateral e acabamento externo do gabinete modular Metal Life'],
+  ],
+  'intro'=>'Uma estrutura desenvolvida para facilitar ajustes, organiza&ccedil;&atilde;o interna e acesso durante a montagem e a manuten&ccedil;&atilde;o.',
+  'items'=>[
+   ['title'=>'Trilhos adaptativos','text'=>'Permitem maior flexibilidade para ajustes de profundidade e diferentes configura&ccedil;&otilde;es internas.'],
+   ['title'=>'Fundo remov&iacute;vel','text'=>'Facilita o acesso &agrave;s conex&otilde;es e aos componentes instalados no interior do gabinete.'],
+   ['title'=>'Pain&eacute;is personalizados','text'=>'Uma base preparada para receber recortes, componentes e configura&ccedil;&otilde;es de acordo com o projeto.'],
+   ['title'=>'Gabinete amplo','text'=>'Estrutura alta, robusta e espa&ccedil;osa para acomodar os elementos necess&aacute;rios de cada aplica&ccedil;&atilde;o.'],
+  ],
+  'benefits'=>[
+   'Organiza&ccedil;&atilde;o interna pensada para tornar a montagem mais clara e acess&iacute;vel.',
+   'Acesso simplificado aos componentes durante interven&ccedil;&otilde;es e manuten&ccedil;&otilde;es.',
+   'Configura&ccedil;&atilde;o adapt&aacute;vel ao volume e &agrave; disposi&ccedil;&atilde;o dos equipamentos.',
+  ],
+  'applications'=>[
+   'Pain&eacute;is el&eacute;tricos industriais',
+   'Sistemas de automa&ccedil;&atilde;o e controle',
+   'Conjuntos de distribui&ccedil;&atilde;o de energia',
+   'M&aacute;quinas e equipamentos especiais',
+  ],
+  'project_info'=>[
+   'Dimens&otilde;es dispon&iacute;veis no local de instala&ccedil;&atilde;o',
+   'Lista e disposi&ccedil;&atilde;o dos componentes internos',
+   'Pontos de entrada de cabos e necessidades de acesso',
+   'Material, acabamento e condi&ccedil;&otilde;es do ambiente',
+  ],
+ ],
+ 'mesa-de-comando'=>[
+  'name'=>'Mesa de comando',
+  'title'=>'Mesa de comando industrial | Detalhes construtivos | Metal Life',
+  'description'=>'Veja os detalhes da mesa de comando Metal Life para montagens el&eacute;tricas industriais, comandos e distribui&ccedil;&atilde;o de energia.',
+  'image'=>'/images/quadros-comando/quadro-comando-industrial.jpg',
+  'image_width'=>1600,
+  'image_height'=>1195,
+  'alt'=>'Fotografia real de uma estrutura de comando industrial instalada',
+  'gallery'=>[
+   ['src'=>'/images/quadros-comando/quadro-comando-industrial.jpg','width'=>1600,'height'=>1195,'alt'=>'Estrutura de comando industrial instalada'],
+  ],
+  'intro'=>'Solu&ccedil;&atilde;o para montagens el&eacute;tricas industriais, distribui&ccedil;&atilde;o de energia e comandos de m&aacute;quinas e equipamentos.',
+  'items'=>[
+   ['title'=>'Estrutura modular','text'=>'Constru&ccedil;&atilde;o pensada para organizar a montagem e facilitar a integra&ccedil;&atilde;o dos componentes.'],
+   ['title'=>'Placa de montagem regul&aacute;vel','text'=>'Permite adequar a posi&ccedil;&atilde;o de montagem &agrave;s necessidades do conjunto el&eacute;trico.'],
+   ['title'=>'Acesso para opera&ccedil;&atilde;o','text'=>'Formato de mesa que aproxima comandos e componentes da rotina do operador.'],
+   ['title'=>'Op&ccedil;&otilde;es de acabamento','text'=>'A configura&ccedil;&atilde;o pode ser desenvolvida em inox ou com acabamento met&aacute;lico, conforme o projeto.'],
+  ],
+  'benefits'=>[
+   'Ergonomia de acesso aos comandos e componentes usados durante a opera&ccedil;&atilde;o.',
+   'Organiza&ccedil;&atilde;o interna preparada para montagens el&eacute;tricas industriais.',
+   'Estrutura configur&aacute;vel conforme os elementos e as interfaces do projeto.',
+  ],
+  'applications'=>[
+   'Comando de m&aacute;quinas e equipamentos',
+   'Automa&ccedil;&atilde;o de processos industriais',
+   'Distribui&ccedil;&atilde;o e controle de energia',
+   'Postos de opera&ccedil;&atilde;o e supervis&atilde;o',
+  ],
+  'project_info'=>[
+   'Dimens&otilde;es e altura de trabalho desejadas',
+   'Quantidade e posi&ccedil;&atilde;o dos comandos',
+   'Componentes previstos para a montagem interna',
+   'Material, acabamento e ambiente de utiliza&ccedil;&atilde;o',
+  ],
+ ],
+];
+return ['products'=>$products,'articles'=>$articles,'features'=>$features];

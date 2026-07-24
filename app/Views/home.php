@@ -1,27 +1,13 @@
-<section class="video-hero desktop-landing" aria-labelledby="video-hero-title">
- <video class="video-hero-media" autoplay muted loop playsinline preload="metadata" poster="/assets/images/metal-life-processo-poster.jpg" data-hero-video aria-label="Processo industrial e equipamentos fabricados pela Metal Life">
-  <source src="/assets/videos/metal-life-processo.mp4?v=2" type="video/mp4" media="(min-width: 769px)">
-  Seu navegador n&atilde;o reproduz este v&iacute;deo. <a href="/assets/videos/metal-life-processo.mp4?v=2">Assista ao arquivo diretamente</a>.
- </video>
- <div class="video-hero-content wrap">
-  <span class="eyebrow">Engenharia &middot; fabrica&ccedil;&atilde;o &middot; ind&uacute;stria</span>
-  <h1 id="video-hero-title">Solu&ccedil;&otilde;es industriais que ganham forma</h1>
-  <p>Veja de perto o processo, a estrutura e o cuidado por tr&aacute;s das caixas met&aacute;licas e cabines de pintura desenvolvidas pela Metal Life.</p>
-  <div class="actions"><a class="button button-primary" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento</a><a class="button button-secondary" href="#focos">Conhecer solu&ccedil;&otilde;es</a></div>
+<section class="cabine-hero" aria-labelledby="cabine-hero-title">
+ <div class="cabine-hero-copy">
+  <span class="cabine-hero-kicker">Engenharia industrial Metal Life</span>
+  <h1 id="cabine-hero-title">Robustez por fora.<br>Precis&atilde;o em cada detalhe.</h1>
+  <span class="cabine-hero-line" aria-hidden="true"></span>
  </div>
-</section>
-<section class="mobile-home-hero mobile-landing" aria-labelledby="mobile-hero-title">
- <video class="mobile-home-hero-media" autoplay muted loop playsinline preload="metadata" poster="/assets/images/metal-life-processo-poster.jpg" aria-label="Processo industrial e equipamentos fabricados pela Metal Life">
-  <source src="/assets/videos/metal-life-processo-mobile.mp4?v=2" type="video/mp4" media="(max-width: 768px)">
- </video>
- <div class="mobile-home-hero-content">
-  <span class="eyebrow">Engenharia &middot; fabrica&ccedil;&atilde;o</span>
-  <h1 id="mobile-hero-title">Solu&ccedil;&otilde;es industriais que ganham forma</h1>
-  <p>Caixas met&aacute;licas, pain&eacute;is e cabines de pintura desenvolvidos para cada projeto.</p>
-  <div class="mobile-home-actions">
-   <a class="button button-primary" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento</a>
-   <a class="mobile-hero-link" href="#focos">Conhecer solu&ccedil;&otilde;es <span aria-hidden="true">&darr;</span></a>
-  </div>
+ <div class="cabine-hero-gallery">
+  <figure class="cabine-hero-photo cabine-hero-photo-primary" tabindex="0"><img src="/img/cabine.jpeg" width="960" height="1280" fetchpriority="high" alt="Cabine industrial Metal Life vista de frente"></figure>
+  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine2.jpeg" width="960" height="1280" fetchpriority="high" alt="Detalhe interno da cabine industrial Metal Life"></figure>
+  <figure class="cabine-hero-photo" tabindex="0"><img src="/img/cabine3.jpeg" width="960" height="1280" fetchpriority="high" alt="Acabamento lateral da cabine industrial Metal Life"></figure>
  </div>
 </section>
 <section class="focus-showcase" id="focos" aria-labelledby="focus-showcase-title"><div class="wrap">
@@ -31,16 +17,16 @@
   <div><h2 id="focus-showcase-title">Solu&ccedil;&otilde;es pensadas para montagem e manuten&ccedil;&atilde;o</h2><p>Explore os diferenciais de estruturas desenvolvidas para facilitar instala&ccedil;&atilde;o, organiza&ccedil;&atilde;o e acesso aos componentes.</p></div>
  </header>
  <div class="focus-showcase-grid">
-  <a class="focus-showcase-item" href="/img/foco.jpeg" target="_blank" rel="noopener" aria-label="Ampliar detalhes do gabinete modular" data-reveal>
+  <article class="focus-showcase-item" data-reveal>
    <strong class="focus-showcase-index" aria-hidden="true">01</strong>
    <img src="/img/foco.jpeg" width="1398" height="683" loading="lazy" alt="Gabinete modular com trilhos adaptativos, fundo remov&iacute;vel e painel personalizado">
-   <span><strong>Gabinete modular</strong><small>Explorar detalhes <b aria-hidden="true">&nearr;</b></small></span>
-  </a>
-  <a class="focus-showcase-item" href="/img/foco2.jpeg" target="_blank" rel="noopener" aria-label="Ampliar detalhes da mesa de comando" data-reveal>
+   <div class="focus-showcase-meta"><strong>Gabinete modular</strong><a class="focus-showcase-link" href="/detalhes/gabinete-modular">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
+  </article>
+  <article class="focus-showcase-item" data-reveal>
    <strong class="focus-showcase-index" aria-hidden="true">02</strong>
    <img src="/img/foco2.jpeg" width="1416" height="772" loading="lazy" alt="Mesa de comando industrial em inox e a&ccedil;o com placa de montagem regul&aacute;vel">
-   <span><strong>Mesa de comando</strong><small>Explorar detalhes <b aria-hidden="true">&nearr;</b></small></span>
-  </a>
+   <div class="focus-showcase-meta"><strong>Mesa de comando</strong><a class="focus-showcase-link" href="/detalhes/mesa-de-comando">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
+  </article>
  </div>
 </div></section>
 <section class="section section-dark"><div class="wrap"><header class="section-heading"><span class="eyebrow">Crit&eacute;rios de projeto</span><h2>O que orienta cada solu&ccedil;&atilde;o</h2></header><div class="benefit-grid"><?php foreach(['Fabrica&ccedil;&atilde;o sob medida'=>'Dimens&otilde;es e configura&ccedil;&atilde;o definidas conforme a aplica&ccedil;&atilde;o.','Estruturas robustas'=>'Constru&ccedil;&atilde;o met&aacute;lica voltada &agrave;s demandas do ambiente industrial.','Atendimento t&eacute;cnico e comercial'=>'Levantamento das informa&ccedil;&otilde;es necess&aacute;rias antes da proposta.','Personaliza&ccedil;&atilde;o dimensional'=>'Projeto preparado para espa&ccedil;o, instala&ccedil;&atilde;o e processo informados.'] as $t=>$p):?><article><span aria-hidden="true">+</span><h3><?=$t?></h3><p><?=$p?></p></article><?php endforeach;?></div></div></section>
