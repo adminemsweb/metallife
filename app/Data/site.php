@@ -42,8 +42,9 @@ $features=[
   'image_height'=>1536,
   'alt'=>'Fotografia real do gabinete met&aacute;lico personalizado Metal Life aberto, com estrutura cinza e painel interno laranja',
   'gallery'=>[
-   ['src'=>'/img/site/cabine2.webp','width'=>1024,'height'=>1536,'alt'=>'Vista frontal do gabinete met&aacute;lico personalizado Metal Life aberto'],
-   ['src'=>'/img/site/cabine.webp','width'=>1024,'height'=>1536,'alt'=>'Vista lateral e acabamento externo do gabinete met&aacute;lico personalizado Metal Life'],
+   ['src'=>'/img/site/cabine2.webp','width'=>1024,'height'=>1536,'alt'=>'Vista frontal do gabinete met&aacute;lico personalizado Metal Life aberto','caption'=>'Vista frontal e configura&ccedil;&atilde;o completa'],
+   ['src'=>'/img/site/cabine.webp','width'=>1024,'height'=>1536,'alt'=>'Vista lateral e acabamento externo do gabinete met&aacute;lico personalizado Metal Life','caption'=>'Acabamento externo e estrutura lateral'],
+   ['src'=>'/img/site/cabine3.png','width'=>960,'height'=>1280,'alt'=>'Vista interna do gabinete met&aacute;lico personalizado com portas abertas e pain&eacute;is laranja','caption'=>'Espa&ccedil;o interno e pain&eacute;is de montagem'],
   ],
   'intro'=>'Fabricado sob medida para atender &agrave;s necessidades de cada projeto, com estrutura robusta, organiza&ccedil;&atilde;o interna e acesso facilitado durante a montagem, a instala&ccedil;&atilde;o e a manuten&ccedil;&atilde;o.',
   'overview'=>[

@@ -65,10 +65,11 @@
   <h2 id="feature-gallery-title">Constru&ccedil;&atilde;o vista em detalhes</h2>
  </header>
  <div class="feature-gallery-grid">
-  <?php foreach(array_slice($feature['gallery'],1) as $index=>$photo):?>
+  <?php $galleryPhotos=$slug==='gabinete-modular'?$feature['gallery']:array_slice($feature['gallery'],1);$galleryNumberStart=$slug==='gabinete-modular'?1:2;?>
+  <?php foreach($galleryPhotos as $index=>$photo):?>
   <figure>
    <img src="<?=e($photo['src'])?>" width="<?=$photo['width']?>" height="<?=$photo['height']?>" loading="lazy" alt="<?=e(html_entity_decode($photo['alt']))?>">
-   <figcaption><?=str_pad((string)($index+2),2,'0',STR_PAD_LEFT)?> / <?=$feature['name']?></figcaption>
+   <figcaption><span><?=str_pad((string)($index+$galleryNumberStart),2,'0',STR_PAD_LEFT)?></span><strong><?=$photo['caption']??$feature['name']?></strong></figcaption>
   </figure>
   <?php endforeach;?>
  </div>
