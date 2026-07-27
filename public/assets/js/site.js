@@ -123,6 +123,10 @@
     const canvas=render?.querySelector('[data-cabine-canvas]');
     const panelButtons=[...picker.querySelectorAll('[data-cabine-panel]')];
     const frameButtons=[...picker.querySelectorAll('[data-cabine-frame]')];
+    const randomButton=picker.querySelector('[data-cabine-random]');
+    const resetButton=picker.querySelector('[data-cabine-reset]');
+    const panelCustom=picker.querySelector('[data-cabine-panel-custom]');
+    const frameCustom=picker.querySelector('[data-cabine-frame-custom]');
     const panelName=picker.querySelector('[data-cabine-panel-name]');
     const frameName=picker.querySelector('[data-cabine-frame-name]');
     if(!gallery||!render||!source||!canvas||!panelButtons.length||!frameButtons.length)return;
@@ -132,11 +136,18 @@
       red:[0,.85],
       yellow:[.14,.92],
       green:[.34,.82],
-      blue:[.61,.8]
+      blue:[.61,.8],
+      cyan:[.52,.78],
+      purple:[.76,.72],
+      white:[0,0],
+      black:[0,0]
     };
     let panelIndex=0;
     let frameIndex=0;
+    let customPanelColor=null;
+    let customFrameColor=null;
     let cycleTimer=null;
+    let hasUserSelection=false;
     let sourcePixels=null;
     const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -154,12 +165,38 @@
       const p=2*l-q;
       return[hue(p,q,h+1/3),hue(p,q,h),hue(p,q,h-1/3)];
     };
+    const hexToHsl=hex=>{
+      const value=Number.parseInt(hex.slice(1),16);
+      const red=((value>>16)&255)/255;
+      const green=((value>>8)&255)/255;
+      const blue=(value&255)/255;
+      const max=Math.max(red,green,blue);
+      const min=Math.min(red,green,blue);
+      const delta=max-min;
+      const lightness=(max+min)/2;
+      if(delta===0)return[0,0,lightness];
+      const saturation=delta/(1-Math.abs(2*lightness-1));
+      let hue=max===red?(green-blue)/delta:max===green?2+(blue-red)/delta:4+(red-green)/delta;
+      hue=((hue/6)%1+1)%1;
+      return[hue,saturation,lightness];
+    };
+    const customToneRgb=(tone,sourceLightness)=>{
+      const [hue,saturation,targetLightness]=tone;
+      if(saturation<.08){
+        const value=targetLightness>.82?.62+sourceLightness*.36:targetLightness<.18?.02+sourceLightness*.22:targetLightness*.45+sourceLightness*.45;
+        return[value,value,value*.99];
+      }
+      const lightness=Math.min(.92,Math.max(.035,targetLightness*.22+sourceLightness*.78));
+      return hslToRgb(hue,Math.max(.28,saturation),lightness);
+    };
     const renderColors=()=>{
       if(!sourcePixels)return;
       const pixels=new Uint8ClampedArray(sourcePixels.data);
-      const panelKey=panelButtons[panelIndex].dataset.cabinePanel;
-      const frameKey=frameButtons[frameIndex].dataset.cabineFrame;
-      const [panelHue,panelSaturation]=panelTones[panelKey];
+      const panelKey=customPanelColor?'custom':panelButtons[panelIndex].dataset.cabinePanel;
+      const frameKey=customFrameColor?'custom':frameButtons[frameIndex].dataset.cabineFrame;
+      const panelTone=panelKey==='custom'?hexToHsl(customPanelColor):panelTones[panelKey];
+      const [panelHue,panelSaturation]=panelTone;
+      const frameTone=frameKey==='custom'?hexToHsl(customFrameColor):null;
 
       for(let index=0;index<pixels.length;index+=4){
         if(pixels[index+3]===0)continue;
@@ -172,15 +209,43 @@
         const delta=max-min;
         const saturation=delta===0?0:delta/(1-Math.abs(2*lightness-1));
         const isPanel=saturation>.28&&red>green*1.12&&red>blue*1.35;
-        const isStructure=!isPanel&&saturation<.16&&max>.1;
+        const isNeutralMetal=saturation<.16||delta<.14;
+        const isStructure=!isPanel&&isNeutralMetal&&max>.1;
 
         if(isPanel){
-          const [nextRed,nextGreen,nextBlue]=hslToRgb(panelHue,panelSaturation,lightness);
-          pixels[index]=nextRed*255;
-          pixels[index+1]=nextGreen*255;
-          pixels[index+2]=nextBlue*255;
-        }else if(isStructure&&frameKey!=='gray'){
-          if(frameKey==='white'){
+          if(panelKey==='custom'){
+            const [nextRed,nextGreen,nextBlue]=customToneRgb(panelTone,lightness);
+            pixels[index]=nextRed*255;
+            pixels[index+1]=nextGreen*255;
+            pixels[index+2]=nextBlue*255;
+          }else if(panelKey==='white'){
+            const value=Math.min(1,.68+lightness*.3)*255;
+            pixels[index]=value;
+            pixels[index+1]=value;
+            pixels[index+2]=value*.985;
+          }else if(panelKey==='black'){
+            const value=(.035+lightness*.28)*255;
+            pixels[index]=value*.94;
+            pixels[index+1]=value*.98;
+            pixels[index+2]=value;
+          }else{
+            const [nextRed,nextGreen,nextBlue]=hslToRgb(panelHue,panelSaturation,lightness);
+            pixels[index]=nextRed*255;
+            pixels[index+1]=nextGreen*255;
+            pixels[index+2]=nextBlue*255;
+          }
+        }else if(isStructure){
+          if(frameKey==='custom'){
+            const [nextRed,nextGreen,nextBlue]=customToneRgb(frameTone,lightness);
+            pixels[index]=nextRed*255;
+            pixels[index+1]=nextGreen*255;
+            pixels[index+2]=nextBlue*255;
+          }else if(frameKey==='gray'){
+            const value=(.16+lightness*.52)*255;
+            pixels[index]=value*.94;
+            pixels[index+1]=value*.98;
+            pixels[index+2]=value;
+          }else if(frameKey==='white'){
             const value=Math.min(1,lightness*1.08+.06)*255;
             pixels[index]=value;
             pixels[index+1]=value;
@@ -192,6 +257,21 @@
             pixels[index+2]=value;
           }else if(frameKey==='navy'){
             const [nextRed,nextGreen,nextBlue]=hslToRgb(.59,.58,.09+lightness*.4);
+            pixels[index]=nextRed*255;
+            pixels[index+1]=nextGreen*255;
+            pixels[index+2]=nextBlue*255;
+          }else if(frameKey==='black'){
+            const value=(.025+lightness*.22)*255;
+            pixels[index]=value*.94;
+            pixels[index+1]=value*.98;
+            pixels[index+2]=value;
+          }else if(frameKey==='red'){
+            const [nextRed,nextGreen,nextBlue]=hslToRgb(0,.58,.08+lightness*.44);
+            pixels[index]=nextRed*255;
+            pixels[index+1]=nextGreen*255;
+            pixels[index+2]=nextBlue*255;
+          }else if(frameKey==='beige'){
+            const [nextRed,nextGreen,nextBlue]=hslToRgb(.11,.28,.22+lightness*.52);
             pixels[index]=nextRed*255;
             pixels[index+1]=nextGreen*255;
             pixels[index+2]=nextBlue*255;
@@ -210,6 +290,8 @@
       });
     };
     const selectPanel=index=>{
+      customPanelColor=null;
+      panelCustom?.classList.remove('is-active');
       panelIndex=(index+panelButtons.length)%panelButtons.length;
       const activeButton=panelButtons[panelIndex];
       gallery.dataset.activeColor=activeButton.dataset.cabinePanel;
@@ -218,6 +300,8 @@
       renderColors();
     };
     const selectFrame=index=>{
+      customFrameColor=null;
+      frameCustom?.classList.remove('is-active');
       frameIndex=index;
       const activeButton=frameButtons[frameIndex];
       if(frameName)frameName.textContent=activeButton.dataset.colorName;
@@ -225,19 +309,55 @@
       renderColors();
     };
     const startCycle=()=>{
-      if(reduceMotion)return;
+      if(reduceMotion||hasUserSelection)return;
       window.clearInterval(cycleTimer);
       cycleTimer=window.setInterval(()=>selectPanel(panelIndex+1),3200);
     };
 
     panelButtons.forEach((button,index)=>{
       button.addEventListener('click',()=>{
+        hasUserSelection=true;
+        window.clearInterval(cycleTimer);
         selectPanel(index);
-        startCycle();
       });
     });
     frameButtons.forEach((button,index)=>{
-      button.addEventListener('click',()=>selectFrame(index));
+      button.addEventListener('click',()=>{
+        hasUserSelection=true;
+        window.clearInterval(cycleTimer);
+        selectFrame(index);
+      });
+    });
+    panelCustom?.addEventListener('change',()=>{
+      hasUserSelection=true;
+      window.clearInterval(cycleTimer);
+      customPanelColor=panelCustom.value;
+      panelCustom.classList.add('is-active');
+      gallery.dataset.activeColor='custom';
+      if(panelName)panelName.textContent=customPanelColor.toUpperCase();
+      updateButtons(panelButtons,-1);
+      renderColors();
+    });
+    frameCustom?.addEventListener('change',()=>{
+      hasUserSelection=true;
+      window.clearInterval(cycleTimer);
+      customFrameColor=frameCustom.value;
+      frameCustom.classList.add('is-active');
+      if(frameName)frameName.textContent=customFrameColor.toUpperCase();
+      updateButtons(frameButtons,-1);
+      renderColors();
+    });
+    randomButton?.addEventListener('click',()=>{
+      hasUserSelection=true;
+      window.clearInterval(cycleTimer);
+      selectPanel(Math.floor(Math.random()*panelButtons.length));
+      selectFrame(Math.floor(Math.random()*frameButtons.length));
+    });
+    resetButton?.addEventListener('click',()=>{
+      hasUserSelection=true;
+      window.clearInterval(cycleTimer);
+      selectPanel(0);
+      selectFrame(0);
     });
     picker.addEventListener('mouseenter',()=>window.clearInterval(cycleTimer));
     picker.addEventListener('mouseleave',startCycle);

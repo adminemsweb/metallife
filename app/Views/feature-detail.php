@@ -18,14 +18,28 @@
    <a class="text-link" href="/#focos">&larr; Voltar aos destaques</a>
   </div>
  </div>
+ <?php $primaryPhoto=$feature['gallery'][0];?>
+ <?php if($slug==='gabinete-modular'):?>
+ <div class="feature-product-configurator" data-cabine-gallery data-active-color="orange">
+  <figure class="feature-product-hero-visual" data-cabine-render>
+   <img src="<?=e($primaryPhoto['src'])?>" width="<?=$primaryPhoto['width']?>" height="<?=$primaryPhoto['height']?>" alt="<?=e(html_entity_decode($primaryPhoto['alt']))?>" data-cabine-source>
+   <canvas data-cabine-canvas aria-hidden="true"></canvas>
+   <figcaption>
+    <span>01</span>
+    <strong><?=$feature['overview_title']??'Solu&ccedil;&atilde;o desenvolvida para o projeto'?></strong>
+   </figcaption>
+  </figure>
+  <?php require __DIR__.'/partials/cabine-color-picker.php';?>
+ </div>
+ <?php else:?>
  <figure class="feature-product-hero-visual">
-  <?php $primaryPhoto=$feature['gallery'][0];?>
   <img src="<?=e($primaryPhoto['src'])?>" width="<?=$primaryPhoto['width']?>" height="<?=$primaryPhoto['height']?>" alt="<?=e(html_entity_decode($primaryPhoto['alt']))?>">
   <figcaption>
    <span>01</span>
    <strong><?=$feature['overview_title']??'Solu&ccedil;&atilde;o desenvolvida para o projeto'?></strong>
   </figcaption>
  </figure>
+ <?php endif;?>
 </section>
 <section class="feature-specifications">
  <div class="wrap feature-specifications-layout">
