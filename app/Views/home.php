@@ -37,11 +37,11 @@
 <?php
 $homeProductImages=[
  'quadros-comando-metalicos'=>['/img/produtos/IMG_0297.JPG',2592,1936],
- 'gabinetes-autoportantes'=>['/img/produtos/IMG_8599.jpeg',3024,4032],
+ 'gabinetes-autoportantes'=>['/img/produtos/IMG_9204.JPG',3264,2448],
  'cabine-pintura-eletrostatica-po'=>['/img/produtos/IMG_8399.JPG',3264,2448],
- 'cabine-pintura-liquida'=>['/img/produtos/DSCF0367.JPG',2592,1944],
- 'cabine-pintura-automatica'=>['/img/produtos/IMG_1878.JPG',4032,3024],
- 'estufas-fornos-cura'=>['/img/produtos/DSC04406.JPG',2304,1728],
+ 'cabine-pintura-liquida'=>['/img/produtos/IMG_5579.JPG',3264,2448],
+ 'cabine-pintura-automatica'=>['/img/produtos/DSC00911.JPG',3456,2592],
+ 'estufas-fornos-cura'=>['/img/produtos/IMG_8355.JPG',1600,899],
 ];
 $homeProducts=[];
 foreach($homeProductImages as $homeSlug=>$imageData){
