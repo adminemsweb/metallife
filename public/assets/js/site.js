@@ -36,6 +36,12 @@
   mobileMenu?.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMobileMenu));
 
   navButtons.forEach(button=>{
+    const dropdown=button.nextElementSibling;
+    dropdown.id=`nav-dropdown-${navButtons.indexOf(button)}`;
+    button.setAttribute('aria-controls',dropdown.id);
+    button.parentElement.addEventListener('focusout',event=>{
+      if(!button.parentElement.contains(event.relatedTarget))closeNavGroups();
+    });
     button.addEventListener('click',event=>{
       event.stopPropagation();
       const group=button.parentElement;
@@ -50,6 +56,8 @@
   });
   document.addEventListener('keydown',event=>{
     if(event.key==='Escape'){
+      const expandedButton=navButtons.find(button=>button.getAttribute('aria-expanded')==='true');
+      expandedButton?.focus();
       closeNavGroups();
       if(mobileMenu&&!mobileMenu.hidden)closeMobileMenu();
     }
@@ -65,6 +73,11 @@
         first.focus();
       }
     }
+  });
+
+  window.matchMedia('(min-width:1281px)').addEventListener('change',event=>{
+    closeNavGroups();
+    if(event.matches&&mobileMenu&&!mobileMenu.hidden)closeMobileMenu();
   });
 
   const form=document.querySelector('[data-submit-form]');
@@ -131,17 +144,6 @@
     const frameName=picker.querySelector('[data-cabine-frame-name]');
     if(!gallery||!render||!source||!canvas||!panelButtons.length||!frameButtons.length)return;
 
-    const panelTones={
-      orange:[.055,.98],
-      red:[0,.85],
-      yellow:[.14,.92],
-      green:[.34,.82],
-      blue:[.61,.8],
-      cyan:[.52,.78],
-      purple:[.76,.72],
-      white:[0,0],
-      black:[0,0]
-    };
     let panelIndex=0;
     let frameIndex=0;
     let customPanelColor=null;
@@ -149,138 +151,21 @@
     let cycleTimer=null;
     let hasUserSelection=false;
     let sourcePixels=null;
+    let finishMasks=null;
     const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const hslToRgb=(h,s,l)=>{
-      if(s===0)return[l,l,l];
-      const hue=(p,q,t)=>{
-        if(t<0)t+=1;
-        if(t>1)t-=1;
-        if(t<1/6)return p+(q-p)*6*t;
-        if(t<1/2)return q;
-        if(t<2/3)return p+(q-p)*(2/3-t)*6;
-        return p;
-      };
-      const q=l<.5?l*(1+s):l+s-l*s;
-      const p=2*l-q;
-      return[hue(p,q,h+1/3),hue(p,q,h),hue(p,q,h-1/3)];
-    };
-    const hexToHsl=hex=>{
-      const value=Number.parseInt(hex.slice(1),16);
-      const red=((value>>16)&255)/255;
-      const green=((value>>8)&255)/255;
-      const blue=(value&255)/255;
-      const max=Math.max(red,green,blue);
-      const min=Math.min(red,green,blue);
-      const delta=max-min;
-      const lightness=(max+min)/2;
-      if(delta===0)return[0,0,lightness];
-      const saturation=delta/(1-Math.abs(2*lightness-1));
-      let hue=max===red?(green-blue)/delta:max===green?2+(blue-red)/delta:4+(red-green)/delta;
-      hue=((hue/6)%1+1)%1;
-      return[hue,saturation,lightness];
-    };
-    const customToneRgb=(tone,sourceLightness)=>{
-      const [hue,saturation,targetLightness]=tone;
-      if(saturation<.08){
-        const value=targetLightness>.82?.62+sourceLightness*.36:targetLightness<.18?.02+sourceLightness*.22:targetLightness*.45+sourceLightness*.45;
-        return[value,value,value*.99];
-      }
-      const lightness=Math.min(.92,Math.max(.035,targetLightness*.22+sourceLightness*.78));
-      return hslToRgb(hue,Math.max(.28,saturation),lightness);
-    };
     const renderColors=()=>{
-      if(!sourcePixels)return;
-      const pixels=new Uint8ClampedArray(sourcePixels.data);
-      const panelKey=customPanelColor?'custom':panelButtons[panelIndex].dataset.cabinePanel;
-      const frameKey=customFrameColor?'custom':frameButtons[frameIndex].dataset.cabineFrame;
-      const panelTone=panelKey==='custom'?hexToHsl(customPanelColor):panelTones[panelKey];
-      const [panelHue,panelSaturation]=panelTone;
-      const frameTone=frameKey==='custom'?hexToHsl(customFrameColor):null;
-
-      for(let index=0;index<pixels.length;index+=4){
-        if(pixels[index+3]===0)continue;
-        const red=pixels[index]/255;
-        const green=pixels[index+1]/255;
-        const blue=pixels[index+2]/255;
-        const max=Math.max(red,green,blue);
-        const min=Math.min(red,green,blue);
-        const lightness=(max+min)/2;
-        const delta=max-min;
-        const saturation=delta===0?0:delta/(1-Math.abs(2*lightness-1));
-        const isPanel=saturation>.28&&red>green*1.12&&red>blue*1.35;
-        const isNeutralMetal=saturation<.16||delta<.14;
-        const isStructure=!isPanel&&isNeutralMetal&&max>.1;
-
-        if(isPanel){
-          if(panelKey==='custom'){
-            const [nextRed,nextGreen,nextBlue]=customToneRgb(panelTone,lightness);
-            pixels[index]=nextRed*255;
-            pixels[index+1]=nextGreen*255;
-            pixels[index+2]=nextBlue*255;
-          }else if(panelKey==='white'){
-            const value=Math.min(1,.68+lightness*.3)*255;
-            pixels[index]=value;
-            pixels[index+1]=value;
-            pixels[index+2]=value*.985;
-          }else if(panelKey==='black'){
-            const value=(.035+lightness*.28)*255;
-            pixels[index]=value*.94;
-            pixels[index+1]=value*.98;
-            pixels[index+2]=value;
-          }else{
-            const [nextRed,nextGreen,nextBlue]=hslToRgb(panelHue,panelSaturation,lightness);
-            pixels[index]=nextRed*255;
-            pixels[index+1]=nextGreen*255;
-            pixels[index+2]=nextBlue*255;
-          }
-        }else if(isStructure){
-          if(frameKey==='custom'){
-            const [nextRed,nextGreen,nextBlue]=customToneRgb(frameTone,lightness);
-            pixels[index]=nextRed*255;
-            pixels[index+1]=nextGreen*255;
-            pixels[index+2]=nextBlue*255;
-          }else if(frameKey==='gray'){
-            const value=(.16+lightness*.52)*255;
-            pixels[index]=value*.94;
-            pixels[index+1]=value*.98;
-            pixels[index+2]=value;
-          }else if(frameKey==='white'){
-            const value=Math.min(1,lightness*1.08+.06)*255;
-            pixels[index]=value;
-            pixels[index+1]=value;
-            pixels[index+2]=value*.985;
-          }else if(frameKey==='graphite'){
-            const value=(.07+lightness*.34)*255;
-            pixels[index]=value*.92;
-            pixels[index+1]=value*.98;
-            pixels[index+2]=value;
-          }else if(frameKey==='navy'){
-            const [nextRed,nextGreen,nextBlue]=hslToRgb(.59,.58,.09+lightness*.4);
-            pixels[index]=nextRed*255;
-            pixels[index+1]=nextGreen*255;
-            pixels[index+2]=nextBlue*255;
-          }else if(frameKey==='black'){
-            const value=(.025+lightness*.22)*255;
-            pixels[index]=value*.94;
-            pixels[index+1]=value*.98;
-            pixels[index+2]=value;
-          }else if(frameKey==='red'){
-            const [nextRed,nextGreen,nextBlue]=hslToRgb(0,.58,.08+lightness*.44);
-            pixels[index]=nextRed*255;
-            pixels[index+1]=nextGreen*255;
-            pixels[index+2]=nextBlue*255;
-          }else if(frameKey==='beige'){
-            const [nextRed,nextGreen,nextBlue]=hslToRgb(.11,.28,.22+lightness*.52);
-            pixels[index]=nextRed*255;
-            pixels[index+1]=nextGreen*255;
-            pixels[index+2]=nextBlue*255;
-          }
-        }
+      if(!sourcePixels){
+        gallery.dispatchEvent(new CustomEvent('cabine:colors'));
+        return;
       }
+      const panelKey=customPanelColor||panelButtons[panelIndex].dataset.cabinePanel;
+      const frameKey=customFrameColor||frameButtons[frameIndex].dataset.cabineFrame;
+      const pixels=window.CabinetFinish.render(sourcePixels,finishMasks,panelKey,frameKey);
 
       canvas.getContext('2d').putImageData(new ImageData(pixels,sourcePixels.width,sourcePixels.height),0,0);
       render.classList.add('is-rendered');
+      gallery.dispatchEvent(new CustomEvent('cabine:colors'));
     };
     const updateButtons=(buttons,activeIndex)=>{
       buttons.forEach((button,buttonIndex)=>{
@@ -309,7 +194,7 @@
       renderColors();
     };
     const startCycle=()=>{
-      if(reduceMotion||hasUserSelection)return;
+      if(reduceMotion||hasUserSelection||gallery.dataset.cabineAutocycle==='false')return;
       window.clearInterval(cycleTimer);
       cycleTimer=window.setInterval(()=>selectPanel(panelIndex+1),3200);
     };
@@ -366,6 +251,7 @@
       if(!picker.contains(event.relatedTarget))startCycle();
     });
     const prepareCanvas=()=>{
+      if(!source.naturalWidth||!source.naturalHeight)return;
       const width=Math.min(768,source.naturalWidth);
       const height=Math.round(width*(source.naturalHeight/source.naturalWidth));
       canvas.width=width;
@@ -373,10 +259,15 @@
       const context=canvas.getContext('2d',{willReadFrequently:true});
       context.drawImage(source,0,0,width,height);
       sourcePixels=context.getImageData(0,0,width,height);
+      finishMasks=window.CabinetFinish.prepare(sourcePixels,source.getAttribute('src')||'');
       renderColors();
     };
+    source.addEventListener('load',prepareCanvas);
+    source.addEventListener('error',()=>{
+      sourcePixels=null;
+      render.classList.remove('is-rendered');
+    });
     if(source.complete)prepareCanvas();
-    else source.addEventListener('load',prepareCanvas,{once:true});
     startCycle();
   });
 })();

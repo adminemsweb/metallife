@@ -4,7 +4,7 @@
   <h1 id="cabine-hero-title"><span class="cabine-hero-brand">Metal Life</span><span class="cabine-hero-descriptor">Solu&ccedil;&otilde;es met&aacute;licas sob medida para a ind&uacute;stria.</span></h1>
   <p class="cabine-hero-description">Projetamos e fabricamos estruturas para pain&eacute;is el&eacute;tricos, automa&ccedil;&atilde;o e processos de pintura industrial conforme a necessidade de cada aplica&ccedil;&atilde;o.</p>
   <span class="cabine-hero-line" aria-hidden="true"></span>
-  <div class="cabine-hero-actions"><a class="button button-primary" href="/solicitar-orcamento">Solicitar or&ccedil;amento</a><a class="cabine-hero-link" href="/detalhes/gabinete-modular">Conhecer solu&ccedil;&otilde;es <span aria-hidden="true">&rarr;</span></a></div>
+  <div class="cabine-hero-actions"><a class="button button-primary" href="/solicitar-orcamento">Solicitar or&ccedil;amento</a><a class="cabine-hero-link" href="/gabinete-metalico">Conhecer este gabinete <span aria-hidden="true">&rarr;</span></a></div>
  </div>
  <div class="cabine-hero-gallery" data-cabine-gallery data-active-color="orange">
   <figure class="cabine-hero-photo cabine-hero-photo-primary" data-cabine-render>
@@ -24,7 +24,7 @@
   <article class="focus-showcase-item" data-reveal>
    <strong class="focus-showcase-index" aria-hidden="true">01</strong>
    <img src="/img/foco.jpeg" width="1398" height="683" loading="lazy" alt="Gabinete met&aacute;lico personalizado com portas remov&iacute;veis, trilhos adaptativos e fundo remov&iacute;vel">
-   <div class="focus-showcase-meta"><strong>Gabinete personalizado</strong><a class="focus-showcase-link" href="/detalhes/gabinete-modular">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
+   <div class="focus-showcase-meta"><strong>Gabinete personalizado</strong><a class="focus-showcase-link" href="/gabinete-metalico">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
   </article>
   <article class="focus-showcase-item" data-reveal>
    <strong class="focus-showcase-index" aria-hidden="true">02</strong>
