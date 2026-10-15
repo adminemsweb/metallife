@@ -12,7 +12,7 @@ final class SiteController
     {
         $this->site=require dirname(__DIR__).'/Data/site.php';
         $this->cspNonce=base64_encode(random_bytes(18));
-        header("Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'nonce-{$this->cspNonce}'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests");
+        header("Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'nonce-{$this->cspNonce}'; frame-src https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://www.googletagmanager.com; manifest-src 'self'; upgrade-insecure-requests");
     }
 
     public function page(string $template,array $data=[]):void{ View::render($template,['site'=>$this->site,'cspNonce'=>$this->cspNonce,...$data]); }

@@ -8,6 +8,14 @@ $organization=['@context'=>'https://schema.org','@type'=>'Organization','@id'=>$
 $website=['@context'=>'https://schema.org','@type'=>'WebSite','@id'=>$siteUrl.'/#website','url'=>$siteUrl.'/','name'=>'Metal Life','alternateName'=>['Metal Life Industrial','metallife.com.br'],'publisher'=>['@id'=>$siteUrl.'/#organization'],'inLanguage'=>'pt-BR'];
 ?>
 <!doctype html><html lang="pt-BR"><head>
+<!-- Google Tag Manager -->
+<script nonce="<?=e($cspNonce)?>">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
+n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKWLBPJQ');</script>
+<!-- End Google Tag Manager -->
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?=e($plain($seo['title']))?></title><meta name="description" content="<?=e($plain($seo['description']))?>">
 <link rel="canonical" href="<?=e($canonical)?>"><meta name="robots" content="index,follow,max-image-preview:large">
@@ -21,6 +29,10 @@ $website=['@context'=>'https://schema.org','@type'=>'WebSite','@id'=>$siteUrl.'/
 <?php if($template==='cabinet'):?><link rel="stylesheet" href="/assets/css/cabinet.css?v=4"><?php endif;?>
 <?php if(in_array($template,['booth-planner','cabinet'],true)):?><link rel="stylesheet" href="/assets/css/booth-planner.css?v=4"><?php endif;?>
 </head><body id="top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKWLBPJQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a class="skip-link" href="#main-content">Pular para o conte&uacute;do</a>
 <header class="site-header"><div class="header-inner">
  <a class="header-brand" href="/" aria-label="Metal Life &mdash; p&aacute;gina inicial"><span class="site-logo"><img src="/img/metal-life-logo.png" width="62" height="62" alt="Metal Life"></span></a>
