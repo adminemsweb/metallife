@@ -2,9 +2,9 @@
 .bp-wrap{width:min(1380px,calc(100% - 64px));margin-inline:auto}
 .bp-hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding-block:50px 65px}
 .bp-hero h1{font-size:clamp(44px,5vw,74px);line-height:1.03;letter-spacing:-.05em;margin:0;font-weight:650}
-.bp-hero h1 em{color:#cf5b25;font-style:normal}
+.bp-hero h1 em{color:var(--accent);font-style:normal}
 .bp-hero p{max-width:520px;font-size:17px;line-height:1.8;color:#60717b;margin:24px 0}
-.bp-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-height:50px;padding:16px 22px;background:#cf5b25;border:0;border-radius:5px;color:#fff;text-decoration:none;font-size:13px;font-weight:650;cursor:pointer}
+.bp-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-height:50px;padding:16px 22px;background:var(--accent);border:0;border-radius:5px;color:#fff;text-decoration:none;font-size:13px;font-weight:650;cursor:pointer}
 .bp-primary:hover{background:#b84b1c}.bp-primary:disabled{background:#667780;cursor:wait}
 .bp-primary span{font-size:20px}.bp-hero-note{display:block;margin-top:20px;font-size:10px;color:#657782;letter-spacing:.04em}
 .bp-hero figure{margin:0;border-radius:12px;overflow:hidden;background:#102b46}
@@ -30,14 +30,14 @@
 .bp-field textarea{resize:vertical;line-height:1.6}.bp-field input::placeholder,.bp-field textarea::placeholder{color:#85949d;font-size:12px}
 .bp-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-block:18px}
 .bp-options label{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.6;padding:12px;border:1px solid #dce3e4;border-radius:5px;cursor:pointer}
-.bp-options input{width:17px;height:17px;margin:1px 0 0;flex:none;accent-color:#cf5b25}.bp-options label:has(input:disabled){opacity:.55}
+.bp-options input{width:17px;height:17px;margin:1px 0 0;flex:none;accent-color:var(--accent)}.bp-options label:has(input:disabled){opacity:.55}
 .bp-summary{position:sticky;top:110px;padding:28px;background:#102b46;border-radius:10px;color:#fff;min-width:0;max-height:calc(100dvh - 130px);overflow-y:auto}
 .bp-summary .eyebrow{color:#efaa80;font-size:10px;margin-bottom:12px}.bp-summary h2{font-size:26px;margin:0;letter-spacing:-.03em}.bp-summary>p{font-size:12px;color:#b6c8d4;line-height:1.7;margin:14px 0}
 .bp-summary dl{margin:22px 0}.bp-summary dl>div{padding:11px 0;border-bottom:1px solid #ffffff22}.bp-summary dt{font-size:10px;color:#a9becd;margin-bottom:5px}.bp-summary dd{font-size:13px;margin:0;line-height:1.6;white-space:pre-line;overflow-wrap:anywhere}
-.bp-summary .bp-technical-note{font-size:11px;padding-left:12px;border-left:2px solid #cf5b25}
+.bp-summary .bp-technical-note{font-size:11px;padding-left:12px;border-left:2px solid var(--accent)}
 .bp-summary .bp-primary{width:100%;font-size:12px;padding-inline:16px}.bp-copy{width:100%;padding:12px;background:transparent;border:0;color:#d5e1e9;font-size:11px;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .bp-fit{padding:12px 15px;border:1px solid #e4c5a9;background:#fff6eb;border-radius:5px;font-size:12px;line-height:1.7;color:#815426}
-.bp-explain{padding-top:65px}.bp-explain>div{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:32px}.bp-explain article{border-top:1px solid #ccd7db;padding-top:20px}.bp-explain article>span{font-size:10px;color:#b94b19;letter-spacing:.05em}.bp-explain h3{font-size:20px;margin:20px 0 12px;letter-spacing:-.02em}.bp-explain p{font-size:14px;color:#647783;line-height:1.75}
+.bp-explain{padding-top:65px}.bp-explain>div{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:32px}.bp-explain article{border-top:1px solid #ccd7db;padding-top:20px}.bp-explain article>span{font-size:10px;color:var(--accent-hover);letter-spacing:.05em}.bp-explain h3{font-size:20px;margin:20px 0 12px;letter-spacing:-.02em}.bp-explain p{font-size:14px;color:#647783;line-height:1.75}
 .booth-planner [hidden]{display:none!important}
 .bp-layout>*,.bp-heading>*,.bp-two>*,.bp-three>*,.bp-options>*{min-width:0;max-width:100%}
 .bp-step-title,.bp-field>span,.bp-options label,.bp-primary{overflow-wrap:anywhere}

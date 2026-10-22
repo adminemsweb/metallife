@@ -1,58 +1,62 @@
-<section class="cabine-hero" aria-labelledby="cabine-hero-title">
- <div class="cabine-hero-copy">
-  <span class="cabine-hero-kicker">Caixas met&aacute;licas &bull; Gabinetes &bull; Cabines de pintura</span>
-  <h1 id="cabine-hero-title"><span class="cabine-hero-brand">Metal Life</span><span class="cabine-hero-descriptor">Solu&ccedil;&otilde;es met&aacute;licas sob medida para a ind&uacute;stria.</span></h1>
-  <p class="cabine-hero-description">Projetamos e fabricamos estruturas para pain&eacute;is el&eacute;tricos, automa&ccedil;&atilde;o e processos de pintura industrial conforme a necessidade de cada aplica&ccedil;&atilde;o.</p>
-  <span class="cabine-hero-line" aria-hidden="true"></span>
-  <div class="cabine-hero-actions"><a class="button button-primary" href="/solicitar-orcamento">Solicitar or&ccedil;amento</a><a class="cabine-hero-link" href="/gabinete-metalico">Conhecer este gabinete <span aria-hidden="true">&rarr;</span></a></div>
+<section class="ml-landing" aria-labelledby="ml-landing-title">
+ <div class="ml-landing-backdrop" aria-hidden="true"></div>
+ <div class="wrap ml-landing-inner">
+  <div class="ml-landing-copy">
+   <span class="ml-label">Metal Life &nbsp;/&nbsp; Solu&ccedil;&otilde;es industriais</span>
+   <h1 id="ml-landing-title">Solu&ccedil;&otilde;es met&aacute;licas<br>sob medida para<br><em>a sua ind&uacute;stria.</em></h1>
+   <p>Caixas met&aacute;licas, gabinetes e cabines de pintura. Do seu projeto &agrave; fabrica&ccedil;&atilde;o, com aten&ccedil;&atilde;o a cada detalhe.</p>
+   <div class="ml-landing-actions"><a class="ml-pill ml-pill-primary" href="#linhas">Conhe&ccedil;a nossos produtos <span aria-hidden="true">&rarr;</span></a><a class="ml-landing-contact" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Fale com a Metal Life &nearr;</a></div>
+  </div>
  </div>
- <div class="cabine-hero-gallery" data-cabine-gallery data-active-color="orange">
-  <figure class="cabine-hero-photo cabine-hero-photo-primary" data-cabine-render>
-   <img src="/img/site/cabine2.webp" width="1024" height="1536" fetchpriority="high" alt="Gabinete met&aacute;lico personalizado Metal Life visto de frente" data-cabine-source>
-   <canvas data-cabine-canvas aria-hidden="true"></canvas>
-  </figure>
-  <?php require __DIR__.'/partials/cabine-color-picker.php';?>
- </div>
+ <svg class="ml-landing-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 48C180 100 330 1 535 20S900 104 1100 51 1310 25 1440 47V90H0Z" fill="#fff"/><path d="M0 32C180 84 330 0 535 9S900 89 1100 39 1310 12 1440 34" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/></svg>
 </section>
-<section class="focus-showcase" id="focos" aria-labelledby="focus-showcase-title"><div class="wrap">
- <span class="focus-showcase-orbit" aria-hidden="true"></span>
- <header class="focus-showcase-heading" data-reveal>
-  <div><span class="eyebrow">Foco em cada detalhe</span><span class="focus-showcase-count">02 solu&ccedil;&otilde;es em destaque</span></div>
-  <div><h2 id="focus-showcase-title">Solu&ccedil;&otilde;es pensadas para montagem e manuten&ccedil;&atilde;o</h2><p>Explore os diferenciais de estruturas desenvolvidas para facilitar instala&ccedil;&atilde;o, organiza&ccedil;&atilde;o e acesso aos componentes.</p></div>
- </header>
- <div class="focus-showcase-grid">
-  <article class="focus-showcase-item" data-reveal>
-   <strong class="focus-showcase-index" aria-hidden="true">01</strong>
-   <img src="/img/foco.jpeg" width="1398" height="683" loading="lazy" alt="Gabinete met&aacute;lico personalizado com portas remov&iacute;veis, trilhos adaptativos e fundo remov&iacute;vel">
-   <div class="focus-showcase-meta"><strong>Gabinete personalizado</strong><a class="focus-showcase-link" href="/gabinete-metalico">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
-  </article>
-  <article class="focus-showcase-item" data-reveal>
-   <strong class="focus-showcase-index" aria-hidden="true">02</strong>
-   <img src="/img/foco2.jpeg" width="1416" height="772" loading="lazy" alt="Mesa de comando industrial em inox e a&ccedil;o com placa de montagem regul&aacute;vel">
-   <div class="focus-showcase-meta"><strong>Mesa de comando</strong><a class="focus-showcase-link" href="/detalhes/mesa-de-comando">Explorar detalhes <b aria-hidden="true">&rarr;</b></a></div>
-  </article>
- </div>
+<section class="ml-reference-highlights" aria-label="Solu&ccedil;&otilde;es Metal Life"><div class="wrap">
+ <div><strong>Caixas</strong><span>Para pain&eacute;is el&eacute;tricos</span></div>
+ <div><strong>Gabinetes</strong><span>Personalizados para sua aplica&ccedil;&atilde;o</span></div>
+ <div><strong>Cabines</strong><span>Para pintura industrial</span></div>
 </div></section>
-<section class="section section-dark"><div class="wrap"><header class="section-heading"><span class="eyebrow">Crit&eacute;rios de projeto</span><h2>O que orienta cada solu&ccedil;&atilde;o</h2></header><div class="benefit-grid"><?php foreach(['Fabrica&ccedil;&atilde;o sob medida'=>'Dimens&otilde;es e configura&ccedil;&atilde;o definidas conforme a aplica&ccedil;&atilde;o.','Estruturas robustas'=>'Constru&ccedil;&atilde;o met&aacute;lica voltada &agrave;s demandas do ambiente industrial.','Atendimento t&eacute;cnico e comercial'=>'Levantamento das informa&ccedil;&otilde;es necess&aacute;rias antes da proposta.','Personaliza&ccedil;&atilde;o dimensional'=>'Projeto preparado para espa&ccedil;o, instala&ccedil;&atilde;o e processo informados.'] as $t=>$p):?><article><span aria-hidden="true">+</span><h3><?=$t?></h3><p><?=$p?></p></article><?php endforeach;?></div></div></section>
-<?php
-$homeProductImages=[
- 'quadros-comando-metalicos'=>['/img/produtos/IMG_0297.JPG',2592,1936],
- 'gabinetes-autoportantes'=>['/img/produtos/IMG_9204.JPG',3264,2448],
- 'cabine-pintura-eletrostatica-po'=>['/img/produtos/IMG_8399.JPG',3264,2448],
- 'cabine-pintura-liquida'=>['/img/produtos/IMG_5579.JPG',3264,2448],
- 'cabine-pintura-automatica'=>['/img/produtos/DSC00911.JPG',3456,2592],
- 'estufas-fornos-cura'=>['/img/produtos/IMG_8355.JPG',1600,899],
-];
-$homeProducts=[];
-foreach($homeProductImages as $homeSlug=>$imageData){
- $homeProducts[$homeSlug]=$site['products'][$homeSlug];
- $homeProducts[$homeSlug]['image']=$imageData[0];
- $homeProducts[$homeSlug]['image_width']=$imageData[1];
- $homeProducts[$homeSlug]['image_height']=$imageData[2];
-}
-?>
-<section class="section wrap product-carousel-section product-carousel-section-featured" data-product-carousel><header class="section-heading split"><div><span class="eyebrow">Principais produtos</span><h2>Conhe&ccedil;a solu&ccedil;&otilde;es reais desenvolvidas pela Metal Life</h2></div><div class="product-carousel-header-actions"><a class="text-link" href="/produtos">Ver todos os produtos &rarr;</a><div class="product-carousel-controls" aria-label="Controles do carrossel"><button type="button" data-carousel-previous aria-label="Produtos anteriores">&larr;</button><button type="button" data-carousel-next aria-label="Pr&oacute;ximos produtos">&rarr;</button></div></div></header><div class="product-carousel-track" data-carousel-track tabindex="0" aria-label="Principais produtos"><?php foreach($homeProducts as $slug=>$product)require __DIR__.'/partials/product-card.php';?></div></section>
-<section class="custom-band"><div class="wrap"><span class="eyebrow">Fabrica&ccedil;&atilde;o sob medida</span><h2>Seu projeto exige medidas ou caracter&iacute;sticas espec&iacute;ficas?</h2><p>A Metal Life desenvolve solu&ccedil;&otilde;es met&aacute;licas considerando dimens&otilde;es, instala&ccedil;&atilde;o, ambiente industrial e requisitos do processo.</p><a class="button button-primary" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Enviar especifica&ccedil;&otilde;es do projeto</a></div></section>
-<section class="section wrap"><header class="section-heading"><span class="eyebrow">Setores atendidos</span><h2>Estruturas para diferentes realidades industriais</h2></header><ul class="sector-list"><?php foreach(['Metal&uacute;rgico','El&eacute;trico','Automa&ccedil;&atilde;o industrial','Fabricantes de m&aacute;quinas','Moveleiro','Automotivo','Agroindustrial','Pintura e tratamento de superf&iacute;cies'] as $sector):?><li><?=$sector?></li><?php endforeach;?></ul></section>
-<section class="section section-soft"><div class="wrap"><header class="section-heading split"><div><span class="eyebrow">Conte&uacute;do t&eacute;cnico</span><h2>Informa&ccedil;&atilde;o para especificar melhor</h2></div><a class="text-link" href="/conteudo-tecnico">Ver todos os artigos &rarr;</a></header><div class="article-grid"><?php foreach(array_slice($site['articles'],0,3,true) as $slug=>$article):?><article class="article-card"><span class="eyebrow"><?=$article['category']?></span><h3><a href="/conteudo-tecnico/<?=e($slug)?>"><?=$article['title']?></a></h3><p>Crit&eacute;rios pr&aacute;ticos para apoiar decis&otilde;es t&eacute;cnicas e comerciais.</p><a class="text-link" href="/conteudo-tecnico/<?=e($slug)?>">Ler artigo &rarr;</a></article><?php endforeach;?></div></div></section>
-<?php $ctaTitle='Precisa de uma caixa met&aacute;lica ou cabine de pintura para o seu projeto?';$ctaText='Envie as informa&ccedil;&otilde;es da aplica&ccedil;&atilde;o e receba um atendimento direcionado &agrave;s necessidades da sua ind&uacute;stria.';require __DIR__.'/partials/cta.php';?>
+<section class="ml-quick-quote" aria-labelledby="ml-quote-title"><div class="wrap">
+ <h2 id="ml-quote-title">Cota&ccedil;&atilde;o sem compromisso</h2><div class="ml-quote-stripe" aria-hidden="true"></div>
+ <form action="/solicitar-orcamento" method="get" data-landing-quote>
+  <div class="ml-quote-grid">
+   <label><span>Seu nome</span><input name="name" autocomplete="name" placeholder="Seu nome" maxlength="120" required></label>
+   <label><span>WhatsApp</span><input name="phone" type="tel" autocomplete="tel" placeholder="WhatsApp" maxlength="30" required></label>
+   <label><span>E-mail</span><input name="email" type="email" autocomplete="email" placeholder="E-mail" maxlength="200" required></label>
+   <label><span>Produtos para cota&ccedil;&atilde;o</span><textarea name="products" placeholder="Produtos para cota&ccedil;&atilde;o" rows="1" maxlength="2000" required></textarea></label>
+  </div>
+  <button type="submit">Solicitar cota&ccedil;&atilde;o <span aria-hidden="true">&rarr;</span></button>
+  <p>Ao continuar, voc&ecirc; abre o WhatsApp com os dados preenchidos e confirma o envio por l&aacute;.</p>
+ </form>
+ <noscript><p><a href="/solicitar-orcamento">Preencher o formul&aacute;rio completo de or&ccedil;amento</a></p></noscript>
+</div></section>
+<section class="ml-lines" id="linhas" aria-labelledby="ml-lines-title"><div class="wrap">
+ <header class="ml-products-heading"><h2 id="ml-lines-title">Produtos</h2></header>
+ <div class="ml-lines-grid">
+ <?php $landingLines=[
+ ['url'=>'/caixa-metalica-sobrepor','image'=>'/images/caixas-metalicas/caixa-metalica-painel-eletrico.jpg','title'=>'Caixa met&aacute;lica de sobrepor','text'=>'Prote&ccedil;&atilde;o e organiza&ccedil;&atilde;o para componentes el&eacute;tricos.','label'=>'Caixas e pain&eacute;is'],
+ ['url'=>'/gabinete-metalico','image'=>'/img/site/cabine2.webp','title'=>'Gabinetes personalizados','text'=>'Espa&ccedil;o, acesso e configura&ccedil;&atilde;o para cada montagem.','label'=>'Comando e automa&ccedil;&atilde;o'],
+ ['url'=>'/cabine-pintura-eletrostatica-po','image'=>'/img/site/cabine-industrial.jpg','title'=>'Cabine de pintura a p&oacute;','text'=>'Estruturas pensadas para o seu processo de pintura.','label'=>'Pintura industrial'],
+ ['url'=>'/estufas-fornos-cura','image'=>'/img/produtos/IMG_8355.JPG','title'=>'Estufas e fornos','text'=>'Solu&ccedil;&otilde;es para as etapas de cura e secagem.','label'=>'Cura e acabamento'],
+ ];
+ foreach(['caixas-metalicas-controlador-acesso-facial','totem-controle-acesso-portaria','protetor-leitor-facial-f-1','suporte-ar-condicionado','suporte-45-graus-leitor-facial'] as $featuredSlug){
+  $featuredProduct=$site['products'][$featuredSlug];
+  $landingLines[]=['url'=>'/'.$featuredSlug,'image'=>$featuredProduct['image'],'title'=>$featuredProduct['name'],'text'=>match($featuredSlug){
+   'caixas-metalicas-controlador-acesso-facial'=>'Totem met&aacute;lico para instala&ccedil;&atilde;o de controladores de acesso facial.',
+   'totem-controle-acesso-portaria'=>'Estrutura para porteiros, interfones e leitores de controle de acesso.',
+   'protetor-leitor-facial-f-1'=>'Conhe&ccedil;a o F-1 e consulte os modelos compat&iacute;veis. Linha de protetores F-1 a F-13.',
+   'suporte-ar-condicionado'=>'Apoio met&aacute;lico em L para a unidade externa do ar-condicionado.',
+   default=>'Posicione o protetor do leitor facial em um &acirc;ngulo de 45&deg;.',
+  },'label'=>$featuredProduct['category']];
+ }
+ foreach($landingLines as $line):?>
+ <a class="ml-line-card" data-reveal href="<?=e($line['url'])?>"><div class="ml-line-image"><img src="<?=e($line['image'])?>" loading="lazy" width="600" height="450" alt="<?=e(html_entity_decode($line['title']))?>"></div><div class="ml-line-body"><span class="ml-label"><?=$line['label']?></span><h3><?=$line['title']?></h3><p><?=$line['text']?></p><span class="ml-line-more">Conhecer produto <b aria-hidden="true">&rarr;</b></span></div></a>
+ <?php endforeach;?>
+ </div>
+ <div class="ml-products-all"><a class="ml-pill ml-pill-primary" href="/produtos">Ver cat&aacute;logo completo <span aria-hidden="true">&rarr;</span></a></div>
+</div></section>
+<section class="ml-about"><div class="wrap ml-about-grid">
+ <div class="ml-about-image"><img src="/images/empresa/fabricacao-metal-life.jpg" width="900" height="675" loading="lazy" alt="Fabrica&ccedil;&atilde;o de estruturas met&aacute;licas Metal Life"><span>Metal Life &nbsp;&bull;&nbsp; Fabrica&ccedil;&atilde;o industrial</span></div>
+ <div class="ml-about-copy"><span class="ml-label">Da necessidade &agrave; solu&ccedil;&atilde;o</span><h2>O seu projeto merece<br>mais que uma medida padr&atilde;o.</h2><p>Cada aplica&ccedil;&atilde;o tem suas particularidades. Por isso, desenvolvemos estruturas met&aacute;licas considerando o espa&ccedil;o, a instala&ccedil;&atilde;o e as condi&ccedil;&otilde;es reais de uso.</p><ul><li>Dimens&otilde;es e configura&ccedil;&otilde;es sob consulta</li><li>Acesso para montagem e manuten&ccedil;&atilde;o</li><li>Especifica&ccedil;&atilde;o alinhada &agrave; sua aplica&ccedil;&atilde;o</li></ul><a class="ml-simple-link" href="/empresa">Conhe&ccedil;a a Metal Life <span aria-hidden="true">&nearr;</span></a></div>
+</div></section>
+<section class="ml-process"><div class="wrap"><header class="ml-section-heading"><div><span class="ml-label">Simples desde o primeiro contato</span><h2>Vamos tirar seu projeto do papel?</h2></div><p>Conte com a Metal Life para entender a necessidade e definir os pr&oacute;ximos passos.</p></header><div class="ml-process-grid"><article><span>01 /</span><h3>Conte o que precisa</h3><p>Envie a aplica&ccedil;&atilde;o, as medidas e os desenhos ou fotos dispon&iacute;veis.</p></article><article><span>02 /</span><h3>Alinhamos os detalhes</h3><p>Avaliamos a configura&ccedil;&atilde;o e os requisitos do seu projeto.</p></article><article><span>03 /</span><h3>Receba uma proposta</h3><p>Converse com nossa equipe sobre a solu&ccedil;&atilde;o e as condi&ccedil;&otilde;es de fornecimento.</p></article></div></div></section>
+<section class="ml-final-cta"><div class="wrap"><div><span class="ml-label">Sua pr&oacute;xima solu&ccedil;&atilde;o come&ccedil;a aqui</span><h2>Metal Life.<br>Na medida da sua ind&uacute;stria.</h2><p>Vamos conversar sobre o que voc&ecirc; precisa fabricar?</p></div><div class="ml-final-actions"><a class="ml-pill ml-pill-light" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento <span aria-hidden="true">&nearr;</span></a><a href="/solicitar-orcamento">Prefere enviar os detalhes? Preencha o formul&aacute;rio &rarr;</a></div></div></section>

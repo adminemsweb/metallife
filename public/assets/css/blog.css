@@ -1,0 +1,24 @@
+/* Compact technical content index. */
+.blog-page .wrap{width:min(1180px,calc(100% - 64px))}
+.blog-page .breadcrumb{padding-top:18px}
+.blog-page .breadcrumb ol{font-size:11px}
+.blog-page .page-intro{padding:32px 0 20px}
+.blog-page .page-intro .eyebrow{font-size:10px;letter-spacing:.12em;margin-bottom:14px}
+.blog-page .page-intro h1{max-width:780px;font-size:clamp(30px,3.1vw,44px);line-height:1.12;letter-spacing:-.04em}
+.blog-page .page-intro>p{max-width:760px;margin-top:18px;font-size:14px;line-height:1.8}
+.blog-page .section{padding-block:18px 46px}
+.blog-page .article-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.blog-page .article-card{display:flex;flex-direction:column;min-width:0;min-height:230px;padding:24px;border:1px solid #dce5eb;border-radius:7px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.blog-page .article-card:hover{border-color:#a9c0d0;box-shadow:0 8px 22px #173b590a}
+.blog-page .article-card .eyebrow{align-self:flex-start;margin-bottom:18px;padding:5px 8px;border-radius:4px;background:#edf3f7;font-size:9px;line-height:1.4;letter-spacing:.05em}
+.blog-page .article-card h2{font-size:19px;line-height:1.3;letter-spacing:-.025em;margin:0 0 14px;color:#173b59}
+.blog-page .article-card h2 a:hover{color:#365f7c}
+.blog-page .article-card p{font-size:12px;line-height:1.8;color:#6c808e;margin:0 0 20px}
+.blog-page .article-card .text-link{margin-top:auto;padding-top:14px;border-top:1px solid #e5ebef;font-size:10px;letter-spacing:.04em}
+.blog-page .cta-band{padding-block:46px;gap:32px}
+.blog-page .cta-band h2{font-size:clamp(26px,2.6vw,36px);line-height:1.15}
+.blog-page .cta-band p{font-size:13px;line-height:1.8}
+@media(max-width:1000px){.blog-page .article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.blog-page .wrap{width:calc(100% - 40px)}.blog-page .page-intro{padding-top:26px}.blog-page .page-intro h1{font-size:32px}.blog-page .page-intro>p{font-size:13px}.blog-page .article-grid{gap:14px}.blog-page .article-card{padding:20px}.blog-page .article-card h2{font-size:18px}.blog-page .cta-band{grid-template-columns:1fr}}
+@media(max-width:480px){.blog-page .wrap{width:calc(100% - 32px)}.blog-page .article-grid{grid-template-columns:1fr}.blog-page .article-card{min-height:0}.blog-page .article-card p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.blog-page .article-card{transition:none}}

@@ -1,0 +1,28 @@
+/* Shared compact reading layout for every technical article. */
+body:has(.article-layout) #main-content>.breadcrumb.wrap{width:min(1080px,calc(100% - 64px));padding-top:18px}
+body:has(.article-layout) .breadcrumb ol{font-size:11px;line-height:1.6}
+.article-layout.wrap{width:min(1080px,calc(100% - 64px));padding:30px 0 50px;grid-template-columns:minmax(0,1fr) 235px;gap:30px 42px;align-items:start}
+.article-layout>header{max-width:850px}
+.article-layout>header .eyebrow{font-size:10px;margin-bottom:14px;letter-spacing:.1em}
+.article-layout h1{max-width:850px;font-size:clamp(30px,3.2vw,44px);line-height:1.12;letter-spacing:-.04em}
+.article-layout>header .lead{max-width:730px;margin:18px 0 0;font-size:14px;line-height:1.8}
+.article-layout .article-meta{margin:14px 0 0;font-size:11px;line-height:1.6}
+.article-layout .article-body{max-width:none;min-width:0}
+.article-layout .article-body h2{font-size:25px;line-height:1.2;letter-spacing:-.025em;margin:34px 0 14px;scroll-margin-top:100px}
+.article-layout .article-body h2:first-child{margin-top:0}
+.article-layout .article-body h3{font-size:18px;line-height:1.35;margin:24px 0 10px}
+.article-layout .article-body p,.article-layout .article-body li{font-size:14px;line-height:1.85;color:#506675}
+.article-layout .article-body p{margin:0 0 16px}
+.article-layout .article-body ul,.article-layout .article-body ol{padding-left:22px;margin:14px 0 20px}
+.article-layout .article-body li{margin-bottom:8px}
+.article-layout aside{top:100px;padding:20px;background:#fff;border:1px solid #dce5eb;border-radius:6px}
+.article-layout aside strong{font-size:12px;margin-bottom:12px;color:#173b59}
+.article-layout aside a{font-size:12px;padding:10px 0;line-height:1.6}
+.article-layout aside a:hover{color:#173b59}
+.article-layout .article-callout{margin-top:28px;padding:24px;border-radius:6px;border:1px solid #dce5eb;background:#eaf0f4}
+.article-layout .article-callout strong{font-size:14px;color:#173b59}
+.article-layout .article-callout p{margin:10px 0 16px}
+.article-layout .article-callout .button{min-height:40px;padding:0 18px;font-size:10px}
+@media(max-width:900px){.article-layout.wrap{grid-template-columns:minmax(0,1fr);gap:24px}.article-layout aside,.article-layout .article-body{grid-column:1;grid-row:auto}.article-layout aside{position:static}.article-layout aside a{padding-block:8px}.article-layout>header{max-width:none}}
+@media(max-width:700px){.article-layout.wrap,body:has(.article-layout) #main-content>.breadcrumb.wrap{width:calc(100% - 40px)}.article-layout.wrap{padding-top:25px}.article-layout h1{font-size:32px}.article-layout .article-body h2{font-size:24px}.article-layout .article-body p,.article-layout .article-body li{font-size:15px}.article-layout>header .lead{font-size:14px}.article-layout .article-callout{padding:20px}}
+@media(max-width:480px){.article-layout.wrap,body:has(.article-layout) #main-content>.breadcrumb.wrap{width:calc(100% - 32px)}.article-layout h1{font-size:30px}.article-layout .article-body h3{font-size:18px}}

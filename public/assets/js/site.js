@@ -7,7 +7,7 @@
   const navButtons=[...document.querySelectorAll('.nav-group>button')];
   let lastFocus=null;
 
-  const mobileFocusable=()=>mobileMenu?[...mobileMenu.querySelectorAll('a,button')]:[];
+  const mobileFocusable=()=>mobileMenu?[...mobileMenu.querySelectorAll('a,button,summary')].filter(item=>item.getClientRects().length>0):[];
   const closeNavGroups=except=>{
     navButtons.forEach(button=>{
       if(button===except)return;

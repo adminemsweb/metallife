@@ -5,7 +5,7 @@
 .ml-footer-invite h2{margin:0;font-size:clamp(32px,3.4vw,48px);line-height:1.08;letter-spacing:-.045em;font-weight:650}
 .ml-footer-invite-action{justify-self:end}
 .ml-footer-invite-action p{margin:0 0 18px;color:#60717a;font-size:14px;line-height:1.7}
-.ml-footer-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:48px;padding:13px 20px;border-radius:5px;background:#cf5b25;color:#fff;font-size:13px;font-weight:650;text-decoration:none;transition:background .2s}
+.ml-footer-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:48px;padding:13px 20px;border-radius:5px;background:var(--accent);color:#fff;font-size:13px;font-weight:650;text-decoration:none;transition:background .2s}
 .ml-footer-cta span{font-size:23px;line-height:1}
 .ml-footer-cta:hover{background:#b34b1c}
 .ml-footer-columns{display:grid;grid-template-columns:1.4fr .85fr .8fr 1.05fr;gap:clamp(24px,4vw,60px);padding-block:42px}

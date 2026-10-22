@@ -1,0 +1,79 @@
+/* Consistent compact scale across the complete cabinet page. */
+.cabinet-page{--cabinet-content:1180px}
+.cabinet-page .wrap,.cabinet-page .bp-wrap{width:min(var(--cabinet-content),calc(100% - 64px));margin-inline:auto}
+.cabinet-page .bp-embedded{padding-block:20px 44px}
+.cabinet-page .bp-heading{padding-top:26px;margin-bottom:24px;gap:24px}
+.cabinet-page .bp-heading h2{font-size:clamp(25px,2.4vw,34px);line-height:1.15}
+.cabinet-page .bp-heading p{font-size:13px;line-height:1.65;margin-top:10px}
+.cabinet-page .bp-example{font-size:11px;padding:9px 13px;min-height:38px}
+.cabinet-page .bp-layout{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:24px}
+.cabinet-page .bp-fields{gap:18px}
+.cabinet-page .bp-fields fieldset{padding:20px;border-radius:7px}
+.cabinet-page .bp-fields legend{font-size:16px;gap:10px;margin-bottom:16px}
+.cabinet-page .bp-step-number{flex-basis:26px;width:26px;height:26px;font-size:10px}
+.cabinet-page .bp-help{font-size:11px;line-height:1.65;margin-bottom:10px}
+.cabinet-page .bp-fields h3{font-size:12px;margin:16px 0 6px}
+.cabinet-page .bp-two,.cabinet-page .bp-three{gap:12px}
+.cabinet-page .bp-field{gap:6px;margin:7px 0 11px}
+.cabinet-page .bp-field>span{font-size:11px;line-height:1.45}
+.cabinet-page .bp-field input,.cabinet-page .bp-field select,.cabinet-page .bp-field textarea{min-height:38px;padding:8px 10px;font-size:12px;line-height:1.6;border-radius:4px}
+.cabinet-page .bp-field input::placeholder,.cabinet-page .bp-field textarea::placeholder{font-size:11px}
+.cabinet-page .bp-options{gap:9px;margin-block:12px}
+.cabinet-page .bp-options label{font-size:11px;line-height:1.6;padding:9px;gap:8px}
+.cabinet-page .bp-options input{width:16px;height:16px}
+.cabinet-page .bp-summary{top:146px;padding:22px;border-radius:7px;max-height:calc(100dvh - 164px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#7592a7 #17364e}
+.cabinet-page .bp-summary .eyebrow{font-size:9px;color:#b7cbd9;margin-bottom:10px}
+.cabinet-page .bp-summary h2{font-size:23px;line-height:1.15;color:#fff}
+.cabinet-page .bp-summary>p{font-size:11px;line-height:1.6;margin:10px 0;color:#b6c8d4}
+.cabinet-page .bp-summary dl{margin:16px 0}
+.cabinet-page .bp-summary dl>div{padding:8px 0}
+.cabinet-page .bp-summary dt{font-size:9px;line-height:1.5;margin-bottom:3px}
+.cabinet-page .bp-summary dd{font-size:11px;line-height:1.55}
+.cabinet-page .bp-summary .bp-technical-note{font-size:10px;line-height:1.6}
+.cabinet-page .bp-primary{min-height:40px;padding:11px 15px;font-size:11px}
+.cabinet-page .bp-primary:hover{background:var(--accent-hover)}
+.cabinet-page .bp-copy{padding:9px;min-height:36px;font-size:10px}
+.cabinet-page .bp-fit{font-size:11px;padding:10px 12px}
+.cabinet-page .bp-explain{padding-top:40px}
+.cabinet-page .bp-explain>h2{font-size:28px}
+.cabinet-page .bp-explain>div{gap:28px;margin-top:24px}
+.cabinet-page .bp-explain h3{font-size:18px;margin:16px 0 10px}
+.cabinet-page .bp-explain p{font-size:12px}
+.cabinet-page .cabinet-benefits,.cabinet-page .cabinet-applications,.cabinet-page .cabinet-project,.cabinet-page .cabinet-final{padding-block:52px}
+.cabinet-page .cabinet-section{padding-block:52px}
+.cabinet-page .cabinet-benefit-grid{gap:32px}
+.cabinet-page .cabinet-benefit-grid h3{font-size:21px;margin:24px 0 14px}
+.cabinet-page .cabinet-benefit-grid p{font-size:13px}
+.cabinet-page .cabinet-finish,.cabinet-page .cabinet-application-layout,.cabinet-page .cabinet-faq{gap:44px}
+.cabinet-page .cabinet-finish img{height:400px}
+.cabinet-page .cabinet-finish p,.cabinet-page .cabinet-application-layout p{font-size:13px;margin-top:18px}
+.cabinet-page .cabinet-application-layout li{font-size:13px;padding:16px 0}
+.cabinet-page .cabinet-specs>div{font-size:13px;padding:17px 16px;gap:28px}
+.cabinet-page .cabinet-project ol{gap:32px;margin:30px 0 24px}
+.cabinet-page .cabinet-project strong{font-size:16px}
+.cabinet-page .cabinet-project p{font-size:13px}
+.cabinet-page .cabinet-faq summary{font-size:13px;padding:18px 20px 18px 0}
+.cabinet-page .cabinet-faq details p{font-size:13px;padding-bottom:18px}
+.cabinet-page .cabinet-final p{margin:18px 0 24px;font-size:13px}
+@media(max-width:1100px){.cabinet-page .bp-layout{grid-template-columns:minmax(0,1fr)}.cabinet-page .bp-summary{position:static;max-height:none;overflow:visible}.cabinet-page .bp-summary dl{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}}
+@media(max-width:1000px){.cabinet-page .cabinet-hero{grid-template-columns:1fr}.cabinet-page .cabinet-construction,.cabinet-page .cabinet-finish,.cabinet-page .cabinet-application-layout,.cabinet-page .cabinet-faq{gap:28px}.cabinet-page .cabinet-specs>div{gap:6px}.cabinet-page .cabinet-studio{--preview-height:440px}}
+@media(max-width:700px){
+ .cabinet-page .wrap,.cabinet-page .bp-wrap{width:calc(100% - 32px)}
+ .cabinet-page .bp-heading{padding-top:22px;gap:14px;margin-bottom:20px}
+ .cabinet-page .bp-heading h2{font-size:27px}
+ .cabinet-page .bp-fields fieldset{padding:18px 15px}
+ .cabinet-page .bp-fields legend{font-size:16px}
+ .cabinet-page .bp-field>span{font-size:12px}
+ .cabinet-page .bp-field input,.cabinet-page .bp-field select,.cabinet-page .bp-field textarea{font-size:16px;min-height:44px;padding:9px 10px}
+ .cabinet-page .bp-options label{min-height:44px;font-size:12px}
+ .cabinet-page .bp-primary,.cabinet-page .bp-copy{min-height:44px}
+ .cabinet-page .cabinet-section,.cabinet-page .cabinet-benefits,.cabinet-page .cabinet-applications,.cabinet-page .cabinet-project,.cabinet-page .cabinet-final{padding-block:38px}
+ .cabinet-page .cabinet-finish img{height:320px}
+ .cabinet-page .cabinet-studio{--preview-height:380px}
+ .cabinet-page .cabinet-zoom{top:calc(var(--preview-height) - 50px)}
+}
+@media(max-width:560px){.cabinet-page .bp-two,.cabinet-page .bp-three,.cabinet-page .bp-options,.cabinet-page .bp-summary dl{grid-template-columns:1fr}.cabinet-page .bp-options{gap:8px}.cabinet-page .bp-summary{padding:20px 18px}}
+
+/* Keep the breadcrumb and cabinet content on the same background. */
+body:has(.cabinet-page) #main-content{background:#fafaf8}
+body:has(.cabinet-page) .breadcrumb{background:transparent}

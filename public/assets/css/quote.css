@@ -1,0 +1,29 @@
+/* Compact commercial quotation page. */
+body:has(.quote-layout) #main-content>.breadcrumb.wrap{width:min(1120px,calc(100% - 64px));padding-top:18px}
+body:has(.quote-layout) .breadcrumb ol{font-size:11px}
+.quote-layout.wrap{width:min(1120px,calc(100% - 64px));padding:30px 0 50px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.quote-layout .quote-intro{padding-top:12px}
+.quote-layout .quote-intro .eyebrow{font-size:10px;margin-bottom:16px}
+.quote-layout .quote-intro h1{font-size:clamp(30px,3.1vw,42px);line-height:1.12;letter-spacing:-.04em;max-width:430px}
+.quote-layout .quote-intro>p{font-size:14px;line-height:1.8;margin-top:18px}
+.quote-layout .quote-intro ol{margin-top:26px}
+.quote-layout .quote-intro li{padding:15px 0}
+.quote-layout .quote-intro li strong{font-size:12px;color:#294f6b}
+.quote-layout .quote-intro li span{font-size:12px;line-height:1.65;margin-top:5px}
+.quote-layout .form-panel{min-width:0;padding:26px;border:1px solid #dce5eb;border-radius:7px}
+.quote-layout .quote-form{gap:16px}
+.quote-layout .form-row{gap:16px}
+.quote-layout .quote-form label{gap:7px;font-size:11px;line-height:1.5;letter-spacing:0;font-weight:600;min-width:0}
+.quote-layout .quote-form .quote-label{color:#294759}
+.quote-layout .quote-label b{font-weight:600;color:#54768f;margin-left:3px}
+.quote-layout .quote-form input,.quote-layout .quote-form select,.quote-layout .quote-form textarea{min-width:0;min-height:38px;padding:9px 10px;border-color:#c6d3dd;border-radius:4px;font-size:12px;line-height:1.5}
+.quote-layout .quote-form textarea{min-height:115px}
+.quote-layout .quote-form input[type=file]{font-size:11px;background:#f5f8fa}
+.quote-layout .file-field small{font-size:10px;line-height:1.6}
+.quote-layout .consent{font-size:11px!important;gap:9px!important}
+.quote-layout .consent input{width:16px;height:16px;min-height:0;padding:0;margin-top:2px}
+.quote-layout .consent span{color:#647987}
+.quote-layout .quote-form .button{min-height:42px;padding:0 18px;font-size:11px}
+.quote-layout .form-notice{font-size:12px;padding:16px}
+@media(max-width:900px){.quote-layout.wrap{grid-template-columns:1fr;gap:28px}.quote-layout .quote-intro h1{max-width:650px}.quote-layout .quote-intro>p{max-width:650px}.quote-layout .quote-intro ol{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.quote-layout .quote-intro li{border-bottom:0}}
+@media(max-width:600px){.quote-layout.wrap,body:has(.quote-layout) #main-content>.breadcrumb.wrap{width:calc(100% - 32px)}.quote-layout.wrap{padding-top:24px}.quote-layout .quote-intro h1{font-size:32px}.quote-layout .quote-intro>p{font-size:13px}.quote-layout .quote-intro ol{grid-template-columns:1fr;gap:0}.quote-layout .quote-intro li{padding-block:12px;border-bottom:1px solid #dce5eb}.quote-layout .form-panel{padding:20px 16px}.quote-layout .form-row{grid-template-columns:1fr;gap:16px}.quote-layout .quote-form label{font-size:12px}.quote-layout .quote-form input,.quote-layout .quote-form select,.quote-layout .quote-form textarea{font-size:16px;min-height:44px}.quote-layout .consent input{min-height:0}.quote-layout .quote-form .button{min-height:44px}}

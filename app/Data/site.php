@@ -15,6 +15,150 @@ $products = [
  'estufas-fornos-cura' => ['name'=>'Estufas e fornos de cura','title'=>'Estufa e Forno de Cura para Pintura | Metal Life','description'=>'Estufas e fornos de cura para processos de pintura industrial, dimensionados conforme pe&ccedil;as, ciclo e capacidade produtiva.','image'=>'/images/estufas/estufa-cura-pintura-industrial.jpg','alt'=>'Estufa de cura para processo de pintura industrial','category'=>'Cabines de pintura','category_url'=>'/cabines-pintura-industrial','summary'=>'Equipamentos destinados &agrave; etapa de cura ou secagem do revestimento, especificados conforme as caracter&iacute;sticas do processo informado.','applications'=>['Cura de pintura em p&oacute;','Secagem de revestimentos','Linhas de tratamento de superf&iacute;cie']],
 ];
 
+$products['suporte-ar-condicionado'] = [
+ 'name'=>'Suporte de ar-condicionado',
+ 'title'=>'Suporte de Ar-condicionado | Metal Life',
+ 'description'=>'Suporte met&aacute;lico para unidade externa de ar-condicionado. Conhe&ccedil;a o produto Metal Life e solicite uma cota&ccedil;&atilde;o.',
+ 'image'=>'/images/produtos/suportearcondicionado.jpeg',
+ 'image_width'=>1080,'image_height'=>1080,
+ 'alt'=>'Par de suportes met&aacute;licos em L para unidade externa de ar-condicionado',
+ 'category'=>'Acess&oacute;rios metalizados','category_url'=>'/produtos#acessorios',
+ 'summary'=>'Estrutura met&aacute;lica em L para apoio da unidade externa de ar-condicionado, com rasgos de fixa&ccedil;&atilde;o para ajuste do posicionamento.',
+ 'applications'=>['Apoio de condensadoras de ar-condicionado','Instala&ccedil;&otilde;es em paredes','Projetos de climatiza&ccedil;&atilde;o'],
+ 'template'=>'catalog-product',
+];
+
+$products['caixas-metalicas-controlador-acesso-facial'] = [
+ 'name'=>'Caixas met&aacute;licas para controlador de acesso facial',
+ 'title'=>'Totem Met&aacute;lico para Controlador de Acesso Facial | Metal Life',
+ 'description'=>'Caixas met&aacute;licas e totens para instala&ccedil;&atilde;o de controladores de acesso facial. Consulte configura&ccedil;&otilde;es e solicite uma cota&ccedil;&atilde;o Metal Life.',
+ 'image'=>'/images/produtos/totem-controlador-acesso-facial.png',
+ 'image_width'=>1254,'image_height'=>1254,
+ 'image_caption'=>'Imagem ilustrativa gerada por IA a partir da refer&ecirc;ncia do cat&aacute;logo. Controlador eletr&ocirc;nico ilustrativo; itens inclusos sob consulta.',
+ 'alt'=>'Ilustra&ccedil;&atilde;o de dois totens met&aacute;licos cinza para controle de acesso facial, em vistas frontal e traseira',
+ 'category'=>'Totens e controle de acesso','category_url'=>'/produtos#totens',
+ 'summary'=>'Estruturas met&aacute;licas verticais para acomodar controladores de acesso facial, com painel frontal para instala&ccedil;&atilde;o do equipamento e corpo para passagem interna dos cabos. A configura&ccedil;&atilde;o &eacute; definida conforme o modelo do controlador e o local de instala&ccedil;&atilde;o.',
+ 'applications'=>['Controle de acesso em portarias','Entradas e sa&iacute;das de empresas e condom&iacute;nios','Instala&ccedil;&atilde;o de terminais de reconhecimento facial'],
+];
+
+$products['totem-controle-acesso-portaria'] = [
+ 'name'=>'Totem para controle de acesso em portarias',
+ 'title'=>'Totem para Portaria e Controle de Acesso | Metal Life',
+ 'description'=>'Totem em a&ccedil;o galvanizado para instala&ccedil;&atilde;o de porteiros, interfones, c&acirc;meras e leitores de acesso. Conhe&ccedil;a as op&ccedil;&otilde;es Metal Life.',
+ 'image'=>'/images/produtos/entradaesaida.jpeg',
+ 'image_width'=>1080,'image_height'=>1080,
+ 'image_caption'=>'Modelos de refer&ecirc;ncia com identifica&ccedil;&atilde;o de entrada e sa&iacute;da. Configura&ccedil;&atilde;o e equipamentos inclusos sob consulta.',
+ 'alt'=>'Totens met&aacute;licos pretos para portaria com identifica&ccedil;&atilde;o vertical de entrada e sa&iacute;da',
+ 'category'=>'Totens e controle de acesso','category_url'=>'/produtos#totens',
+ 'summary'=>'Totem fabricado em a&ccedil;o galvanizado, com caixa de montagem para porteiros, interfones, c&acirc;meras, leitores RFID e leitores de impress&atilde;o digital. Op&ccedil;&otilde;es de identifica&ccedil;&atilde;o para entrada, sa&iacute;da, visitantes, moradores e servi&ccedil;os. Consulte as quatro op&ccedil;&otilde;es de cores de sinaliza&ccedil;&atilde;o do cat&aacute;logo.',
+ 'applications'=>['Portarias de condom&iacute;nios e empresas','Identifica&ccedil;&atilde;o de entradas e sa&iacute;das','Instala&ccedil;&atilde;o de interfones e porteiros','Montagem de leitores RFID, biom&eacute;tricos e c&acirc;meras'],
+ 'gallery'=>[
+  ['src'=>'/images/produtos/entrada.jpeg','alt'=>'Totem com identifica&ccedil;&atilde;o de visitante e detalhe da caixa de montagem','caption'=>'Identifica&ccedil;&atilde;o e caixa de montagem'],
+  ['src'=>'/images/produtos/saida.jpeg','alt'=>'Modelo de totem para sinaliza&ccedil;&atilde;o de sa&iacute;da','caption'=>'Modelo de sa&iacute;da'],
+  ['src'=>'/images/produtos/leitorfrente.jpeg','alt'=>'Vista frontal da caixa met&aacute;lica para instala&ccedil;&atilde;o de leitor de acesso','caption'=>'Caixa de montagem &bull; Frente'],
+  ['src'=>'/images/produtos/leitorlateral.jpeg','alt'=>'Vista lateral da caixa met&aacute;lica para leitor de acesso','caption'=>'Caixa de montagem &bull; Lateral'],
+  ['src'=>'/images/produtos/leitorcosta.jpeg','alt'=>'Vista traseira da caixa met&aacute;lica para leitor de acesso','caption'=>'Caixa de montagem &bull; Traseira'],
+  ['src'=>'/images/produtos/totem-portaria-entrada-saida-ilustrativo.png','alt'=>'Imagem ilustrativa gerada por IA de dois totens com sinaliza&ccedil;&atilde;o verde e azul','caption'=>'Imagem ilustrativa gerada por IA a partir das refer&ecirc;ncias do produto'],
+ ],
+];
+
+$facialProtectors = [
+ 'f-1'=>[
+  'summary'=>'Caixa met&aacute;lica de prote&ccedil;&atilde;o para leitor facial, modelo F-1, com aba superior e recortes para montagem do equipamento. Indicada no cat&aacute;logo para os modelos Intelbras e Hikvision relacionados abaixo.',
+  'compatibility'=>[
+   'Intelbras'=>['SS 3532 MF W','SS 3540 MF FACE BIO EX','SS 3540 MF Face EX','SS 3542 MF W'],
+   'Hikvision'=>['DS-K1T341AM','DS-K1T342AMF'],
+  ],
+ ],
+ 'f-2'=>[
+  'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-2, com aba superior e recortes de montagem conforme o desenho do modelo. Compatibilidades Intelbras indicadas no cat&aacute;logo abaixo.',
+  'compatibility'=>['Intelbras'=>['SS 5531 MF W','SS 5532 MF W','SS 5541 MF W']],
+ ],
+ 'f-3'=>[
+  'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-3, com caixa vertical e aba superior. Modelo indicado no cat&aacute;logo para o controlador Hikvision DS-K1T673DX.',
+  'compatibility'=>['Hikvision'=>['DS-K1T673DX']],
+ ],
+ 'f-4'=>[
+  'summary'=>'Protetor met&aacute;lico compacto para leitor facial, modelo F-4, com aba superior e formato mais baixo. Compatibilidades com a linha Hikvision DS-K1T671 indicadas no cat&aacute;logo abaixo.',
+  'compatibility'=>['Hikvision'=>['DS-K1T671','DS-K1T671M','DS-K1T671M-L','DS-K1T671T']],
+ ],
+];
+$facialProtectors['f-5']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-5, com formato vertical estreito e aba superior. Indicado no cat&aacute;logo para o leitor Intelbras SS 3530 MF W.',
+ 'compatibility'=>['Intelbras'=>['SS 3530 MF W']],
+];
+$facialProtectors['f-6']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-6, com caixa vertical e aba superior. Consulte abaixo as compatibilidades Intelbras e Hikvision indicadas no cat&aacute;logo.',
+ 'compatibility'=>[
+  'Intelbras'=>['SS 1530 MF W','SS 1540 MF W'],
+  'Hikvision'=>['DS-K1T343EWX','DS-K1T343EX','DS-K1T343MWX','DS-K1T343MX'],
+ ],
+];
+$facialProtectors['f-7']=[
+ 'summary'=>'Protetor met&aacute;lico compacto para leitor facial, modelo F-7, com aba superior e recortes de montagem. Indicado no cat&aacute;logo para o controlador Control iD iDFace.',
+ 'compatibility'=>['Control iD'=>['iDFace']],
+];
+$facialProtectors['f-8']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-8, com caixa vertical, aba superior e recortes para montagem. Indicado no cat&aacute;logo para o controlador Control iD iDFace Max.',
+ 'compatibility'=>['Control iD'=>['iDFace Max']],
+];
+$facialProtectors['f-9']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-9, com formato vertical estreito, aba superior e abertura inferior para passagem de cabos. Indicado no cat&aacute;logo para o controlador Hikvision DS-K1T672MX.',
+ 'compatibility'=>['Hikvision'=>['DS-K1T672MX']],
+];
+$facialProtectors['f-10']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-10, com formato vertical e recortes de montagem espec&iacute;ficos. Indicado no cat&aacute;logo para o leitor Intelbras SS 5542 MF W.',
+ 'compatibility'=>['Intelbras'=>['SS 5542 MF W']],
+];
+$facialProtectors['f-11']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-11, com formato vertical, aba superior e recortes de montagem. Consulte abaixo as compatibilidades Hikvision indicadas no cat&aacute;logo.',
+ 'compatibility'=>['Hikvision'=>['DS-K1T671','DS-K1T671M','DS-K1T671M-L','DS-K1T671T']],
+];
+$facialProtectors['f-12']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-12, com caixa vertical, aba superior e recortes para instala&ccedil;&atilde;o do equipamento. Indicado no cat&aacute;logo para o leitor Intelbras SS 5530 MF W.',
+ 'compatibility'=>['Intelbras'=>['SS 5530 MF W']],
+];
+$facialProtectors['f-13']=[
+ 'summary'=>'Protetor met&aacute;lico para leitor facial, modelo F-13, com aba superior e caixa de montagem para o controlador. Indicado no cat&aacute;logo para o equipamento Hikvision DS-K1T344MX-E1.',
+ 'compatibility'=>['Hikvision'=>['DS-K1T344MX-E1']],
+];
+foreach($facialProtectors as $code=>$details){
+ $model=strtoupper($code);
+ $products['protetor-leitor-facial-'.$code]=[
+  'name'=>'Protetor para leitor facial '.$model,
+  'title'=>'Protetor para Leitor Facial '.$model.' | Metal Life',
+  'description'=>'Protetor met&aacute;lico para leitor facial '.$model.'. Consulte os modelos compat&iacute;veis indicados no cat&aacute;logo Metal Life e solicite uma cota&ccedil;&atilde;o.',
+  'image'=>'/images/produtos/protetor-leitor-facial-'.$code.'-ilustrativo.png',
+  'image_width'=>1024,'image_height'=>1024,
+  'image_caption'=>'Imagem ilustrativa gerada por IA a partir do cat&aacute;logo. Confirme recortes e dimens&otilde;es do modelo antes da compra. Leitor eletr&ocirc;nico n&atilde;o representado.',
+  'alt'=>'Imagem ilustrativa do protetor met&aacute;lico preto para leitor facial '.$model.', em vistas frontal e em perspectiva',
+  'category'=>'Protetores para leitores faciais','category_url'=>'/produtos#protetores-faciais',
+  'summary'=>$details['summary'],
+  'sku'=>$model,
+  'compatibility'=>$details['compatibility'],
+  'applications'=>['Prote&ccedil;&atilde;o e montagem de leitores faciais','Portarias e pontos de controle de acesso','Instala&ccedil;&atilde;o conforme fura&ccedil;&atilde;o e modelo do equipamento'],
+ ];
+}
+
+$products['suporte-45-graus-leitor-facial']=[
+ 'name'=>'Suporte 45&deg; para protetor de leitor facial',
+ 'title'=>'Suporte 45 Graus para Protetor de Leitor Facial | Metal Life',
+ 'description'=>'Suporte de 45 graus para posicionamento de protetor de leitor facial em paredes, port&otilde;es e totens. Consulte compatibilidade e solicite uma cota&ccedil;&atilde;o Metal Life.',
+ 'image'=>'/images/produtos/suporte-45-graus-leitor-facial-ilustrativo.png',
+ 'image_width'=>1254,'image_height'=>1254,
+ 'image_caption'=>'Imagem ilustrativa gerada por IA a partir da refer&ecirc;ncia do cat&aacute;logo. Cores, fura&ccedil;&otilde;es e itens inclusos devem ser confirmados na proposta.',
+ 'alt'=>'Imagem ilustrativa de suportes met&aacute;licos angulados de 45 graus, em preto e cinza claro, para montagem de protetor de leitor facial',
+ 'category'=>'Acess&oacute;rios metalizados','category_url'=>'/produtos#acessorios',
+ 'summary'=>'Suporte para posicionar o protetor de leitor facial em &acirc;ngulo de 45&deg;. A fixa&ccedil;&atilde;o &eacute; feita por quatro parafusos em superf&iacute;cies planas, como paredes, port&otilde;es e totens. O posicionamento pode atender ao lado esquerdo ou direito, girando a pe&ccedil;a em 180&deg;, conforme a instala&ccedil;&atilde;o.',
+ 'applications'=>['Portarias e halls de entrada','Corredores e locais com espa&ccedil;o reduzido','Montagem de protetores em paredes, port&otilde;es e totens'],
+ 'details'=>[
+  'Posicionamento'=>'&Acirc;ngulo de 45&deg; para orientar o protetor na instala&ccedil;&atilde;o.',
+  'Fixa&ccedil;&atilde;o'=>'Quatro pontos para parafusos em superf&iacute;cies planas. Fixadores inclusos sob consulta.',
+  'Orienta&ccedil;&atilde;o'=>'Uso &agrave; esquerda ou &agrave; direita mediante giro da pe&ccedil;a em 180&deg;.',
+  'Compatibilidade'=>'O material de refer&ecirc;ncia indica uso com protetores ProtectM. Confirme modelo, fura&ccedil;&atilde;o e medidas com nossa equipe antes de solicitar.',
+ ],
+];
+
 $articleTitles = [
  'ip65-x-ip54'=>['IP65 x IP54: qual grau de prote&ccedil;&atilde;o sua caixa met&aacute;lica precisa?','Pain&eacute;is el&eacute;tricos','o que significa IP65 e IP54','/caixas-metalicas-ip54-ip65'],
  'caixa-metalica-ou-termoplastica'=>['Caixa met&aacute;lica ou termopl&aacute;stica: qual escolher?','Pain&eacute;is el&eacute;tricos','diferen&ccedil;a caixa met&aacute;lica termopl&aacute;stica','/caixas-metalicas-paineis-eletricos'],
