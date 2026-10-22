@@ -159,6 +159,73 @@ $products['suporte-45-graus-leitor-facial']=[
  ],
 ];
 
+$products['rack-outdoor-10u-19-telecom']=[
+ 'name'=>'Rack Outdoor 10U 19&Prime; Telecom',
+ 'title'=>'Rack Outdoor 10U 19 Telecom em A&ccedil;o Galvanizado | Metal Life',
+ 'description'=>'Rack outdoor 10U padr&atilde;o 19 polegadas em a&ccedil;o galvanizado, modelo AzLink 10U LoCo. Conhe&ccedil;a dimens&otilde;es, montagem e acess&oacute;rios compat&iacute;veis.',
+ 'brand'=>'AzLink','sku'=>'10U - LoCo',
+ 'image'=>'/images/produtos/rack-outdoor-10u-19/rack-outdoor-10u-19-1.webp',
+ 'image_width'=>1200,'image_height'=>750,
+ 'image_caption'=>'Imagem de refer&ecirc;ncia do modelo AzLink 10U LoCo. Equipamentos, acess&oacute;rios e configura&ccedil;&atilde;o inclusos conforme proposta.',
+ 'alt'=>'Rack outdoor cinza padr&atilde;o 19 polegadas com porta aberta, trilhos internos e veda&ccedil;&atilde;o perimetral',
+ 'category'=>'Racks padr&atilde;o telecom','category_url'=>'/racks-padrao-telecom',
+ 'summary'=>'Arm&aacute;rio externo compacto em a&ccedil;o galvanizado, padr&atilde;o 19 polegadas e capacidade de 10U. Desenvolvido para organizar equipamentos de telecomunica&ccedil;&otilde;es em campo ou em instala&ccedil;&otilde;es empresariais, com barramentos em formato de calha para passagem de cabos e suporte de fixa&ccedil;&atilde;o Flex.',
+ 'applications'=>['Redes e equipamentos de telecomunica&ccedil;&otilde;es','Instala&ccedil;&otilde;es em campo e ambientes externos','Fixa&ccedil;&atilde;o em parede, torre, mastro ou poste conforme montagem'],
+ 'details'=>[
+  'Estrutura e organiza&ccedil;&atilde;o'=>'Gabinete em a&ccedil;o galvanizado, na cor cinza, com padr&atilde;o 19&Prime; e barramentos em formato de calha para organizar os cabos.',
+  'Montagem com suporte Flex'=>'A refer&ecirc;ncia informa suporte Flex para montagem em torre, mastro ou poste com bra&ccedil;adeira BAP, ou em parede com parabolt. Confirme os fixadores inclusos.',
+  'Acess&oacute;rios compat&iacute;veis'=>'Kit filtro de ar, bandeja 1U e tampas cegas 1U e 2U. A inclus&atilde;o desses itens deve ser confirmada na proposta.',
+  'Prote&ccedil;&atilde;o para uso externo'=>'O material fornecido informa IP56 sem filtro e IP66 com filtro. Confirme o grau de prote&ccedil;&atilde;o e a documenta&ccedil;&atilde;o correspondentes &agrave; configura&ccedil;&atilde;o ofertada.',
+ ],
+ 'specifications'=>[
+  'Marca'=>'AzLink','Modelo'=>'10U - LoCo','Padr&atilde;o'=>'19 polegadas','Capacidade de montagem'=>'10U','Medida nominal do rack'=>'0,45 m',
+  'Altura &times; largura &times; profundidade'=>'53,3 &times; 55,3 &times; 33,5 cm','Peso'=>'14 kg, conforme descri&ccedil;&atilde;o fornecida','Carga m&aacute;xima informada'=>'30 kg',
+  'Material'=>'A&ccedil;o galvanizado','Cor'=>'Cinza','Montagem'=>'Parede, torre, mastro ou poste com suporte e fixadores adequados',
+  'Unidade de fornecimento'=>'1 rack; acess&oacute;rios inclusos conforme proposta','Garantia informada'=>'12 meses de f&aacute;brica; confirmar condi&ccedil;&otilde;es de fornecimento',
+ ],
+ 'gallery'=>[],
+];
+for($rackPhoto=2;$rackPhoto<=9;$rackPhoto++){
+ $products['rack-outdoor-10u-19-telecom']['gallery'][]=[
+  'src'=>'/images/produtos/rack-outdoor-10u-19/rack-outdoor-10u-19-'.$rackPhoto.'.webp',
+  'alt'=>'Rack Outdoor 10U 19 Telecom AzLink: imagem de refer&ecirc;ncia '.$rackPhoto,
+  'caption'=>'Detalhes do modelo de refer&ecirc;ncia &bull; Imagem '.$rackPhoto,
+ ];
+}
+
+$products['rack-outdoor-6u-loco-telecom']=[
+ 'name'=>'Rack Outdoor 6U LoCo &mdash; Padr&atilde;o Telecom',
+ 'title'=>'Rack Outdoor 6U LoCo Padr&atilde;o Telecom | Metal Life',
+ 'description'=>'Rack outdoor AzLink 6U LoCo, padr&atilde;o 19 polegadas, em a&ccedil;o galvanizado. Conhe&ccedil;a dimens&otilde;es, carga informada e op&ccedil;&otilde;es de montagem.',
+ 'brand'=>'AzLink','sku'=>'6U LOCO',
+ 'image'=>'/images/produtos/rack-outdoor-6u-telecom/rack-outdoor-6u-1.webp','image_width'=>1200,'image_height'=>890,
+ 'image_caption'=>'Imagem de refer&ecirc;ncia do rack AzLink 6U LoCo. Configura&ccedil;&atilde;o e itens inclusos conforme proposta.',
+ 'alt'=>'Rack outdoor AzLink 6U LoCo cinza com porta fechada e fechadura, em vista frontal e lateral',
+ 'category'=>'Racks padr&atilde;o telecom','category_url'=>'/racks-padrao-telecom',
+ 'summary'=>'Rack compacto para instala&ccedil;&atilde;o externa, padr&atilde;o 19 polegadas e capacidade de montagem de 6U. Estrutura em a&ccedil;o galvanizado com barramentos em formato de calha para organizar os cabos, indicado para equipamentos de telecomunica&ccedil;&otilde;es em campo ou em instala&ccedil;&otilde;es empresariais.',
+ 'applications'=>['Equipamentos de redes e telecomunica&ccedil;&otilde;es','Instala&ccedil;&otilde;es externas e projetos em campo','Montagem em parede, torre, mastro ou poste com fixa&ccedil;&atilde;o adequada'],
+ 'details'=>[
+  'Organiza&ccedil;&atilde;o padr&atilde;o 19&Prime;'=>'Barramentos de unidade em formato de calha para organizar a passagem dos cabos e a montagem dos equipamentos. Capacidade de 6U.',
+  'Suporte Flex'=>'A descri&ccedil;&atilde;o informa suporte Flex para torre, mastro ou poste com bra&ccedil;adeira BAP, ou parede com parabolt. Confirme os fixadores inclusos na proposta.',
+  'Uso externo'=>'A refer&ecirc;ncia informa IP56 sem filtro e IP66 com filtro de ar. O grau aplic&aacute;vel e sua documenta&ccedil;&atilde;o devem ser confirmados para a configura&ccedil;&atilde;o ofertada.',
+  'Condi&ccedil;&otilde;es de fornecimento'=>'Garantia de f&aacute;brica informada de 3 meses. Consulte disponibilidade, prazo, nota fiscal e composi&ccedil;&atilde;o do fornecimento com a equipe comercial.',
+ ],
+ 'specifications'=>[
+  'Marca'=>'AzLink','Modelo'=>'6U LOCO','Padr&atilde;o'=>'19 polegadas','Capacidade de montagem'=>'6U','Medida nominal do rack'=>'0,27 m',
+  'Altura &times; largura &times; profundidade'=>'35,3 &times; 55,3 &times; 33,5 cm','Peso'=>'13,3 kg, conforme descri&ccedil;&atilde;o fornecida','Carga m&aacute;xima informada'=>'35 kg',
+  'Material'=>'A&ccedil;o galvanizado','Cor'=>'Cinza','Montagem em parede'=>'Sim, com suporte e fixadores adequados','Instala&ccedil;&atilde;o de p&eacute;'=>'N&atilde;o',
+  'Suporte informado'=>'Flex; montagem conforme aplica&ccedil;&atilde;o','Garantia informada'=>'3 meses de f&aacute;brica; confirmar condi&ccedil;&otilde;es',
+ ],
+ 'gallery'=>[],
+];
+for($rack6Photo=2;$rack6Photo<=7;$rack6Photo++){
+ $products['rack-outdoor-6u-loco-telecom']['gallery'][]=[
+  'src'=>'/images/produtos/rack-outdoor-6u-telecom/rack-outdoor-6u-'.$rack6Photo.'.webp',
+  'alt'=>'Rack Outdoor AzLink 6U LoCo: imagem de refer&ecirc;ncia '.$rack6Photo,
+  'caption'=>'Detalhes do modelo de refer&ecirc;ncia &bull; Imagem '.$rack6Photo,
+ ];
+}
+
 $articleTitles = [
  'ip65-x-ip54'=>['IP65 x IP54: qual grau de prote&ccedil;&atilde;o sua caixa met&aacute;lica precisa?','Pain&eacute;is el&eacute;tricos','o que significa IP65 e IP54','/caixas-metalicas-ip54-ip65'],
  'caixa-metalica-ou-termoplastica'=>['Caixa met&aacute;lica ou termopl&aacute;stica: qual escolher?','Pain&eacute;is el&eacute;tricos','diferen&ccedil;a caixa met&aacute;lica termopl&aacute;stica','/caixas-metalicas-paineis-eletricos'],

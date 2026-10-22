@@ -30,7 +30,7 @@ n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertB
 <link rel="stylesheet" href="/assets/css/navigation.css?v=14">
 <link rel="stylesheet" href="/assets/css/footer.css?v=3">
 <?php if($template==='home'):?><link rel="stylesheet" href="/assets/css/landing.css?v=3"><?php endif;?>
-<?php if(in_array($template,['catalog-product','products'],true)):?><link rel="stylesheet" href="/assets/css/catalog-product.css?v=3"><?php endif;?>
+<?php if(in_array($template,['catalog-product','products','category-telecom'],true)):?><link rel="stylesheet" href="/assets/css/catalog-product.css?v=3"><?php endif;?>
 <?php if($template==='applications'):?><link rel="stylesheet" href="/assets/css/applications.css?v=2"><?php endif;?>
 <?php if($template==='blog'):?><link rel="stylesheet" href="/assets/css/blog.css?v=1"><?php endif;?>
 <?php if($template==='article'):?><link rel="stylesheet" href="/assets/css/article.css?v=1"><?php endif;?>
@@ -52,7 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <nav class="desktop-nav" aria-label="Navega&ccedil;&atilde;o principal">
   <a class="<?=e(active_path('/'))?>" href="/">In&iacute;cio</a>
   <a class="<?=e(active_path('/empresa'))?>" href="/empresa">A Metal Life</a>
-  <div class="nav-group <?=current_path()==='/produtos'||isset($site['products'][ltrim(current_path(),'/')])||in_array(current_path(),['/gabinete-metalico','/caixas-metalicas-paineis-eletricos','/cabines-pintura-industrial'],true)?'active':''?>"><button type="button" aria-expanded="false">Produtos <span aria-hidden="true">+</span></button><div class="nav-dropdown nav-products"><div class="catalog-nav-grid"><?php require __DIR__.'/partials/catalog-navigation.php';?></div><a class="catalog-nav-all" href="/produtos"><span>Explore o cat&aacute;logo Metal Life</span><strong>Ver todos os produtos &rarr;</strong></a></div></div>
+  <div class="nav-group <?=current_path()==='/produtos'||isset($site['products'][ltrim(current_path(),'/')])||in_array(current_path(),['/gabinete-metalico','/caixas-metalicas-paineis-eletricos','/cabines-pintura-industrial','/racks-padrao-telecom'],true)?'active':''?>"><button type="button" aria-expanded="false">Produtos <span aria-hidden="true">+</span></button><div class="nav-dropdown nav-products"><div class="catalog-nav-grid"><?php require __DIR__.'/partials/catalog-navigation.php';?></div><a class="catalog-nav-all" href="/produtos"><span>Explore o cat&aacute;logo Metal Life</span><strong>Ver todos os produtos &rarr;</strong></a></div></div>
   <a class="<?=e(active_path('/gabinete-metalico'))?>" href="/gabinete-metalico">Caixa met&aacute;lica</a>
   <a class="<?=e(active_path('/aplicacoes-setores'))?>" href="/aplicacoes-setores">Aplica&ccedil;&otilde;es</a>
   <a class="<?=e(is_path_prefix('/conteudo-tecnico'))?>" href="/conteudo-tecnico">Conte&uacute;do</a>
@@ -63,10 +63,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <button class="menu-trigger" type="button" data-menu-open aria-controls="mobile-menu" aria-expanded="false"><span>Menu</span><b aria-hidden="true"></b></button>
 </div></header>
 <div class="mobile-menu" id="mobile-menu" data-mobile-menu role="dialog" aria-modal="true" aria-label="Navega&ccedil;&atilde;o" hidden><div class="mobile-menu-head"><img src="/img/metal-life-logo.png" width="62" height="62" alt="Metal Life"><button type="button" data-menu-close>Fechar &times;</button></div><?php require __DIR__.'/partials/header-socials.php';?><p class="mobile-menu-label">Explore a Metal Life</p><nav aria-label="Menu mobile"><a href="/">In&iacute;cio</a><a href="/empresa">A Metal Life</a><details class="mobile-catalog"><summary>Produtos</summary><div class="mobile-catalog-content"><?php require __DIR__.'/partials/catalog-navigation.php';?></div><a class="mobile-catalog-all" href="/produtos">Ver todos os produtos &rarr;</a></details><a href="/aplicacoes-setores">Aplica&ccedil;&otilde;es</a><a href="/conteudo-tecnico">Conte&uacute;do t&eacute;cnico</a><a href="/contato">Contato</a><a class="mobile-quote" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento <span aria-hidden="true">&rarr;</span></a></nav></div>
-<main id="main-content" tabindex="-1"<?php if(in_array($template,['product','catalog-product','category-boxes','category-booths'],true)):?> data-product-page<?php endif;?><?php if($template==='category-boxes'):?> class="boxes-page"<?php elseif($template==='products'):?> class="products-page"<?php elseif($template==='applications'):?> class="applications-page"<?php elseif($template==='blog'):?> class="blog-page"<?php endif;?>><?php require __DIR__.'/'.$template.'.php';?></main>
+<main id="main-content" tabindex="-1"<?php if(in_array($template,['product','catalog-product','category-boxes','category-booths'],true)):?> data-product-page<?php endif;?><?php if($template==='category-boxes'):?> class="boxes-page"<?php elseif(in_array($template,['products','category-telecom'],true)):?> class="products-page"<?php elseif($template==='applications'):?> class="applications-page"<?php elseif($template==='blog'):?> class="blog-page"<?php endif;?>><?php require __DIR__.'/'.$template.'.php';?></main>
 <?php require __DIR__.'/partials/footer.php';?>
 <script src="/assets/js/cabinet-finish.js?v=1" defer></script>
 <script src="/assets/js/site.js?v=12" defer></script>
 <?php if($template==='home'):?><script src="/assets/js/landing.js?v=1" defer></script><?php endif;?>
 <?php if($template==='cabinet'):?><script src="/assets/js/cabinet.js?v=1" defer></script><?php endif;?>
-<?php if(in_array($template,['booth-planner','cabinet'],true)):?><script src="/assets/js/booth-project.js?v=2" defer></script><script src="/assets/js/booth-planner.js?v=2" defer></script><?php endif;?></body></html>
+<?php if(in_array($template,['booth-planner','cabinet'],true)):?><script src="/assets/js/booth-project.js?v=2" defer></script><script src="/assets/js/booth-planner.js?v=3" defer></script><?php endif;?></body></html>

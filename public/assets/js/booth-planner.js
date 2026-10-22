@@ -53,9 +53,9 @@
     catch{status.textContent='Não foi possível copiar automaticamente. Use o botão para abrir o projeto no WhatsApp.';}
   });
   example.addEventListener('click',()=>{
-    for(const [name,value] of Object.entries({product:'Panelas',quantity:'500',period:'dia',piece_width:'35',piece_height:'20',piece_depth:'50',hours:'8'}))field(name).value=value;
+    for(const [name,value] of Object.entries({product:'Peças metálicas',quantity:'500',period:'dia',piece_width:'35',piece_height:'20',piece_depth:'50',hours:'8'}))field(name).value=value;
     update();
-    status.textContent='Exemplo aplicado: 500 panelas por dia. Medidas ilustrativas; ajuste para o seu produto.';
+    status.textContent='Exemplo aplicado: 500 peças por dia. Medidas ilustrativas; ajuste para o seu produto.';
     field('product').focus();
   });
   update();submit.disabled=false;copy.hidden=false;example.hidden=false;

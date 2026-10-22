@@ -16,6 +16,10 @@ $catalogColumns=[
   '/cabine-pintura-liquida'=>'Pintura l&iacute;quida',
   '/cabine-pintura-automatica'=>'Cabines autom&aacute;ticas',
   '/estufas-fornos-cura'=>'Estufas e fornos',
+ ]],['title'=>'Racks padr&atilde;o telecom','links'=>[
+  '/racks-padrao-telecom'=>'Ver linha completa',
+  '/rack-outdoor-10u-19-telecom'=>'Rack Outdoor 10U 19&Prime;',
+  '/rack-outdoor-6u-loco-telecom'=>'Rack Outdoor 6U LoCo',
  ]]],
  [['title'=>'Totens e controle de acesso','anchor'=>'/produtos#totens'],['title'=>'Acess&oacute;rios metalizados','anchor'=>'/produtos#acessorios']],
  [['title'=>'Protetores faciais','anchor'=>'/produtos#protetores-faciais','compact'=>true]],

@@ -5,11 +5,11 @@ $dimensions=static function(string $prefix,string $unit)use($input):void{?><div 
 ?>
 <div class="booth-planner bp-embedded">
  <section class="bp-config bp-wrap" id="configurar" aria-labelledby="bp-config-title">
-  <header class="bp-heading"><div><span class="eyebrow">Da necessidade &agrave; proposta</span><h2 id="bp-config-title">Monte a cabine que voc&ecirc; precisa.</h2><p>Preencha o que j&aacute; sabe. As defini&ccedil;&otilde;es t&eacute;cnicas podem ser feitas com a equipe.</p></div><button class="bp-example" type="button" data-booth-example hidden>Ver exemplo: 500 panelas</button></header>
+  <header class="bp-heading"><div><span class="eyebrow">Da necessidade &agrave; proposta</span><h2 id="bp-config-title">Monte a cabine que voc&ecirc; precisa.</h2><p>Preencha o que j&aacute; sabe. As defini&ccedil;&otilde;es t&eacute;cnicas podem ser feitas com a equipe.</p></div><button class="bp-example" type="button" data-booth-example hidden>Ver exemplo: 500 pe&ccedil;as</button></header>
   <form class="bp-layout" id="booth-project" action="/solicitar-orcamento" method="get">
    <div class="bp-fields">
     <fieldset><legend><span class="bp-step-number" aria-hidden="true">01</span><span class="bp-step-title">O que voc&ecirc; vai pintar?</span></legend><p class="bp-help">Informe as medidas da maior pe&ccedil;a, incluindo cabos, al&ccedil;as ou outras sali&ecirc;ncias.</p>
-     <?php $input('product','Produto a pintar *','text','required maxlength="120" placeholder="Ex.: panelas, rodas, port&otilde;es, m&oacute;veis de a&ccedil;o"');?>
+     <?php $input('product','Produto a pintar *','text','required maxlength="120" placeholder="Ex.: estruturas, rodas, port&otilde;es, m&oacute;veis de a&ccedil;o"');?>
      <div class="bp-two"><?php $input('quantity','Quantidade de pe&ccedil;as *','number','required min="1" max="1000000" step="1" inputmode="numeric" placeholder="Ex.: 500"');$select('period','Essa quantidade &eacute; por... *',[''=>'Selecione','lote'=>'Lote','dia'=>'Dia','turno'=>'Turno','semana'=>'Semana','mes'=>'M&ecirc;s'], 'required');?></div>
      <div class="bp-two"><?php $input('material','Material das pe&ccedil;as','text','maxlength="100" placeholder="Ex.: alum&iacute;nio, a&ccedil;o"');$input('weight','Peso da maior pe&ccedil;a (kg)','number','min="0.01" max="100000" step="0.01" inputmode="decimal" placeholder="Opcional"');?></div>
      <h3>Medidas da maior pe&ccedil;a</h3><?php $dimensions('piece','cm');?>
