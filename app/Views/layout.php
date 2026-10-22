@@ -39,6 +39,8 @@ n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertB
 <?php if($template==='cabinet'):?><link rel="stylesheet" href="/assets/css/cabinet.css?v=6"><?php endif;?>
 <?php if(in_array($template,['booth-planner','cabinet'],true)):?><link rel="stylesheet" href="/assets/css/booth-planner.css?v=5"><?php endif;?>
 <?php if($template==='cabinet'):?><link rel="stylesheet" href="/assets/css/cabinet-scale.css?v=2"><?php endif;?>
+<?php if(in_array($template,['product','catalog-product','category-boxes','category-booths'],true)):?><link rel="stylesheet" href="/assets/css/product-scale.css?v=1"><?php endif;?>
+<?php if($template==='product'):?><link rel="stylesheet" href="/assets/css/product-detail.css?v=1"><?php endif;?>
 </head><body id="top">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKWLBPJQ"
@@ -61,7 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <button class="menu-trigger" type="button" data-menu-open aria-controls="mobile-menu" aria-expanded="false"><span>Menu</span><b aria-hidden="true"></b></button>
 </div></header>
 <div class="mobile-menu" id="mobile-menu" data-mobile-menu role="dialog" aria-modal="true" aria-label="Navega&ccedil;&atilde;o" hidden><div class="mobile-menu-head"><img src="/img/metal-life-logo.png" width="62" height="62" alt="Metal Life"><button type="button" data-menu-close>Fechar &times;</button></div><?php require __DIR__.'/partials/header-socials.php';?><p class="mobile-menu-label">Explore a Metal Life</p><nav aria-label="Menu mobile"><a href="/">In&iacute;cio</a><a href="/empresa">A Metal Life</a><details class="mobile-catalog"><summary>Produtos</summary><div class="mobile-catalog-content"><?php require __DIR__.'/partials/catalog-navigation.php';?></div><a class="mobile-catalog-all" href="/produtos">Ver todos os produtos &rarr;</a></details><a href="/aplicacoes-setores">Aplica&ccedil;&otilde;es</a><a href="/conteudo-tecnico">Conte&uacute;do t&eacute;cnico</a><a href="/contato">Contato</a><a class="mobile-quote" href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento <span aria-hidden="true">&rarr;</span></a></nav></div>
-<main id="main-content" tabindex="-1"<?php if($template==='category-boxes'):?> class="boxes-page"<?php elseif($template==='products'):?> class="products-page"<?php elseif($template==='applications'):?> class="applications-page"<?php elseif($template==='blog'):?> class="blog-page"<?php endif;?>><?php require __DIR__.'/'.$template.'.php';?></main>
+<main id="main-content" tabindex="-1"<?php if(in_array($template,['product','catalog-product','category-boxes','category-booths'],true)):?> data-product-page<?php endif;?><?php if($template==='category-boxes'):?> class="boxes-page"<?php elseif($template==='products'):?> class="products-page"<?php elseif($template==='applications'):?> class="applications-page"<?php elseif($template==='blog'):?> class="blog-page"<?php endif;?>><?php require __DIR__.'/'.$template.'.php';?></main>
 <?php require __DIR__.'/partials/footer.php';?>
 <script src="/assets/js/cabinet-finish.js?v=1" defer></script>
 <script src="/assets/js/site.js?v=12" defer></script>
