@@ -32,6 +32,7 @@ n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertB
 <?php if($template==='blog'):?><link rel="stylesheet" href="/assets/css/blog.css?v=1"><?php endif;?>
 <?php if($template==='article'):?><link rel="stylesheet" href="/assets/css/article.css?v=1"><?php endif;?>
 <?php if($template==='quote'):?><link rel="stylesheet" href="/assets/css/quote.css?v=1"><?php endif;?>
+<?php if($template==='contact'):?><link rel="stylesheet" href="/assets/css/contact.css?v=1"><?php endif;?>
 <?php if($template==='cabinet'):?><link rel="stylesheet" href="/assets/css/cabinet.css?v=6"><?php endif;?>
 <?php if(in_array($template,['booth-planner','cabinet'],true)):?><link rel="stylesheet" href="/assets/css/booth-planner.css?v=5"><?php endif;?>
 <?php if($template==='cabinet'):?><link rel="stylesheet" href="/assets/css/cabinet-scale.css?v=2"><?php endif;?>

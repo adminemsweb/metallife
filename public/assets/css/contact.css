@@ -1,0 +1,19 @@
+/* Compact contact page, scoped to its own content. */
+body:has(.contact-channels) #main-content .wrap{width:min(1120px,calc(100% - 64px))}
+body:has(.contact-channels) #main-content .breadcrumb{padding-top:18px}
+body:has(.contact-channels) #main-content .breadcrumb ol{font-size:11px}
+body:has(.contact-channels) #main-content .page-intro{padding:32px 0 36px}
+body:has(.contact-channels) #main-content .eyebrow{font-size:10px;margin-bottom:14px;letter-spacing:.12em}
+body:has(.contact-channels) #main-content .page-intro h1{font-size:clamp(32px,3.2vw,44px);line-height:1.12;letter-spacing:-.04em}
+body:has(.contact-channels) #main-content .page-intro>p{max-width:700px;margin-top:18px;font-size:14px;line-height:1.8}
+body:has(.contact-channels) #main-content .actions{gap:12px;margin-top:24px}
+body:has(.contact-channels) #main-content .button{min-height:42px;padding:0 18px;font-size:10px;letter-spacing:.04em}
+body:has(.contact-channels) #main-content .section{padding-block:42px}
+.contact-channels.two-columns{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:60px;align-items:start}
+.contact-channels h2{font-size:clamp(27px,2.6vw,34px);line-height:1.15;letter-spacing:-.03em;max-width:390px}
+.contact-channels p{max-width:410px;font-size:13px;line-height:1.85;margin-top:18px}
+.contact-channels .contact-channel-list a{padding:17px 0;gap:20px;min-height:58px}
+.contact-channels .contact-channel-list a>span{font-size:10px;letter-spacing:.06em}
+.contact-channels .contact-channel-list strong{font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+@media(max-width:800px){.contact-channels.two-columns{grid-template-columns:1fr;gap:28px}.contact-channels h2,.contact-channels p{max-width:600px}}
+@media(max-width:600px){body:has(.contact-channels) #main-content .wrap{width:calc(100% - 32px)}body:has(.contact-channels) #main-content .page-intro{padding-top:26px}body:has(.contact-channels) #main-content .page-intro h1{font-size:33px}body:has(.contact-channels) #main-content .page-intro>p{font-size:13px}body:has(.contact-channels) #main-content .button{min-height:44px}body:has(.contact-channels) #main-content .section{padding-block:32px}.contact-channels .contact-channel-list a{display:flex;flex-direction:column;align-items:flex-start;gap:7px}.contact-channels .contact-channel-list strong{font-size:14px}}
