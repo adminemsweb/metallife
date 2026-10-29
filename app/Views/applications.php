@@ -19,4 +19,4 @@
  <?php endforeach;?>
  </div>
 </section>
-<section class="applications-contact wrap"><div><span class="eyebrow">Vamos entender seu projeto</span><h2>N&atilde;o encontrou sua aplica&ccedil;&atilde;o?</h2><p>Conte o que voc&ecirc; precisa. Nossa equipe ajuda a avaliar os pr&oacute;ximos passos.</p></div><a href="https://wa.me/5511969195102" target="_blank" rel="noopener noreferrer">Conversar com a Metal Life <span aria-hidden="true">&nearr;</span></a></section>
+<section class="applications-contact wrap"><div><span class="eyebrow">Vamos entender seu projeto</span><h2>N&atilde;o encontrou sua aplica&ccedil;&atilde;o?</h2><p>Conte o que voc&ecirc; precisa. Nossa equipe ajuda a avaliar os pr&oacute;ximos passos.</p></div><a href="https://wa.me/5515997899346" target="_blank" rel="noopener noreferrer">Conversar com a Metal Life <span aria-hidden="true">&nearr;</span></a></section>

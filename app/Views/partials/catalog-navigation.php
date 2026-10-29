@@ -21,8 +21,7 @@ $catalogColumns=[
   '/rack-outdoor-10u-19-telecom'=>'Rack Outdoor 10U 19&Prime;',
   '/rack-outdoor-6u-loco-telecom'=>'Rack Outdoor 6U LoCo',
  ]]],
- [['title'=>'Totens e controle de acesso','anchor'=>'/produtos#totens'],['title'=>'Acess&oacute;rios metalizados','anchor'=>'/produtos#acessorios']],
- [['title'=>'Protetores faciais','anchor'=>'/produtos#protetores-faciais','compact'=>true]],
+ [['title'=>'Acess&oacute;rios metalizados','anchor'=>'/produtos#acessorios']],
 ];
 foreach($catalogColumns as $catalogColumn):?>
 <div class="catalog-nav-column"><?php foreach($catalogColumn as $catalogGroup):

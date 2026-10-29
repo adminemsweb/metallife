@@ -43,7 +43,7 @@
   form.addEventListener('submit',event=>{
     event.preventDefault();update();
     if(!form.reportValidity())return;
-    const url=new URL('https://wa.me/5511969195102');
+    const url=new URL('https://wa.me/5515997899346');
     url.searchParams.set('text',model.message(read()));
     window.location.assign(url.href);
   });

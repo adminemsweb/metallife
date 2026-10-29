@@ -1,4 +1,4 @@
-﻿(()=>{
+(()=>{
   const form=document.querySelector('[data-landing-quote]');
   if(!form)return;
   form.addEventListener('submit',event=>{
@@ -13,6 +13,6 @@
       'E-mail: '+String(data.get('email')||'').trim(),
       'Produtos para cotação: '+String(data.get('products')||'').trim()
     ].join('\n');
-    window.location.assign('https://wa.me/5511969195102?text='+encodeURIComponent(message));
+    window.location.assign('https://wa.me/5515997899346?text='+encodeURIComponent(message));
   });
 })();

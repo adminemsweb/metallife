@@ -119,3 +119,6 @@
 @media(max-width:1380px){.site-header .header-inner{gap:20px}.site-header .header-socials{margin-left:-8px}}
 @media(max-width:700px){.site-header .header-socials{display:none}}
 @media(prefers-reduced-motion:reduce){.header-social-link{transition:none}.header-social-link[href]:hover{transform:none}}
+
+/* Active catalog now uses three navigation columns. */
+.catalog-nav-grid{grid-template-columns:1fr 1.05fr 1fr}

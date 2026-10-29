@@ -340,4 +340,12 @@ $features=[
   ],
  ],
 ];
-return ['products'=>$products,'articles'=>$articles,'features'=>$features];
+// Inactive entries remain preserved in this registry, excluded from public routes and views.
+foreach($products as $productSlug=>&$registeredProduct){
+ if(str_starts_with($productSlug,'protetor-leitor-facial-')||in_array($productSlug,['suporte-45-graus-leitor-facial','totem-controle-acesso-portaria','caixas-metalicas-controlador-acesso-facial'],true)){
+  $registeredProduct['active']=false;
+ }
+}
+unset($registeredProduct);
+$publicProducts=array_filter($products,static fn(array $item):bool=>($item['active']??true)!==false);
+return ['products'=>$publicProducts,'articles'=>$articles,'features'=>$features];
