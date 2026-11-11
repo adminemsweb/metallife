@@ -14,7 +14,7 @@
   </div>
   <?php endif;?>
   <div class="feature-product-actions">
-   <a class="button button-primary" href="https://wa.me/5515997899346" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento</a>
+   <a class="button button-primary" href="https://wa.me/5515996805302" target="_blank" rel="noopener noreferrer">Solicitar or&ccedil;amento</a>
    <a class="text-link" href="/#focos">&larr; Voltar aos destaques</a>
   </div>
  </div>

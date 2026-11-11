@@ -6,7 +6,7 @@ test('WhatsApp message includes complete painting project and units',()=>{
  const message=model.message(project);
  for(const part of ['Panelas','500 peças por dia','L: 35 cm × A: 20 cm × P: 50 cm','L: 2,5 m × A: 2 m × P: 3 m','Alumínio','Peso da maior peça (kg): 1.5','Gancheiras','Várias vezes ao dia','Horas de produção por dia: 8','Operadores simultâneos: 2','Tinta de referência','Azul RAL 5010','220 V trifásico','Peças com alças & tampa + suporte.','João','A&B','São Paulo / SP','Exaustão e filtragem','Recuperação de tinta em pó','avaliação técnica'])assert.ok(message.includes(part),part);
  assert.ok(!message.includes('gabinete metálico'));
- const url=new URL('https://wa.me/5515997899346');url.searchParams.set('text',message);assert.equal(new URL(url.href).searchParams.get('text'),message);
+ const url=new URL('https://wa.me/5515996805302');url.searchParams.set('text',message);assert.equal(new URL(url.href).searchParams.get('text'),message);
 });
 test('quantity period is preserved for batches, shifts and days',()=>{
  for(const period of ['lote','turno','dia'])assert.ok(model.message({...project,period}).includes('500 peças por '+period));

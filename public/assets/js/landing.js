@@ -13,6 +13,6 @@
       'E-mail: '+String(data.get('email')||'').trim(),
       'Produtos para cotação: '+String(data.get('products')||'').trim()
     ].join('\n');
-    window.location.assign('https://wa.me/5515997899346?text='+encodeURIComponent(message));
+    window.location.assign('https://wa.me/5515996805302?text='+encodeURIComponent(message));
   });
 })();

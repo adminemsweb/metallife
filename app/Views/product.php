@@ -1,7 +1,7 @@
 <?php
 $items=[['label'=>'In&iacute;cio','url'=>'/'],['label'=>'Produtos','url'=>'/produtos'],['label'=>$product['category'],'url'=>$product['category_url']],['label'=>$product['name'],'url'=>null]];
 require __DIR__.'/partials/breadcrumb.php';
-$quoteUrl='https://wa.me/5515997899346?text='.rawurlencode('Olá! Gostaria de uma cotação para '.$plain($product['name']).'.');
+$quoteUrl='https://wa.me/5515996805302?text='.rawurlencode('Olá! Gostaria de uma cotação para '.$plain($product['name']).'.');
 $productSchema=['@context'=>'https://schema.org','@type'=>'Product','name'=>$plain($product['name']),'description'=>$plain($product['description']),'image'=>$siteUrl.$product['image'],'brand'=>['@type'=>'Brand','name'=>($product['brand']??'Metal Life')],'url'=>$canonical];
 if(isset($product['sku']))$productSchema['sku']=$product['sku'];
 ?>

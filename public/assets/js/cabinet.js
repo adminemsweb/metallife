@@ -16,7 +16,7 @@
     const panel=panelName.textContent.trim();
     const frame=frameName.textContent.trim();
     const message=`Olá! Tenho interesse no gabinete metálico personalizado Metal Life.\nMinha combinação de referência: painel ${panel}; estrutura ${frame}.\nGostaria de definir as medidas e receber uma proposta.`;
-    quoteLinks.forEach(link=>link.href=`https://wa.me/5515997899346?text=${encodeURIComponent(message)}`);
+    quoteLinks.forEach(link=>link.href=`https://wa.me/5515996805302?text=${encodeURIComponent(message)}`);
     canvas.setAttribute('aria-label',`Gabinete Metal Life: painel ${panel}, estrutura ${frame}. ${angle.textContent.split('/').at(-1).trim()}.`);
     canvas.setAttribute('aria-hidden',String(!render.classList.contains('is-rendered')));
     source.setAttribute('aria-hidden',String(render.classList.contains('is-rendered')));
